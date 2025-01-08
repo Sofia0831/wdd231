@@ -1,0 +1,53 @@
+@media (min-width: 600px) {
+
+    #menu {
+        display: none;
+    }
+
+    .profile h1 {
+        color: aliceblue;
+        margin: 20px;
+        font-size: 60px;
+        font-family: "Jersey 10", sans-serif;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    nav a {
+        display: block;
+        text-decoration: none;
+        padding: 10px;
+        flex: 1 1 100%;
+        text-align: center;
+        font-size: 25px;
+        border: none;
+    }
+    
+    main {
+        max-width: max-content;
+        padding: 1rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+    
+    .card {
+        margin: 0.75rem;
+    }
+
+    .card img {
+        display: block;
+    }
+    
+    .cert {
+        grid-column: 1/4;
+    }
+
+    .card a:hover {
+        color: green;
+    }
+}
