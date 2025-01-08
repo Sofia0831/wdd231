@@ -94,4 +94,4 @@ const courses = [
         ],
         completed: false
     }
-]
+];
