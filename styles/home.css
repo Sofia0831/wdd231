@@ -20,11 +20,15 @@ header {
     align-items: center;
 }
 
+.pfp {
+    box-shadow: 1px 1px 10px 8px rgb(33, 41, 33);
+}
+
 
 .profile h1 {
     color: aliceblue;
     margin: 20px;
-    font-size: 50px;
+    font-size: 60px;
     font-family: "Jersey 10", sans-serif;
 }
 
@@ -41,7 +45,7 @@ nav a {
     color: white;
     flex: 1 1 100%;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 700;
 }
@@ -54,11 +58,61 @@ nav a:hover {
 main {
     max-width: max-content;
     padding: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     display: grid;
     grid-template-columns: 3fr 1fr;
-
 }
 
+.card {
+    margin: 0.75rem;
+    border: 1.5px solid rgb(171, 168, 168);
+    background-color: rgb(221, 223, 217);
+    border-radius: 12px;
+    box-shadow: 3px 3px 5px 3px rgb(160, 160, 160);
+}
+
+.cert {
+    grid-column: 1/4;
+}
+
+.card img {
+    display: block;
+    border: 1.5px solid rgb(206, 204, 204);
+    margin: 20px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: 'Jersey 10', sans-serif;
+}
+
+figcaption {
+    font: italic smaller sans-serif;
+    text-align: center;
+    margin: 10px;
+    margin-top: 0;
+}
+
+h2 {
+    text-align: center;
+    background-color: rgb(109, 136, 91);
+    padding: 0.75rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-family: 'Jersey 10', sans-serif;
+    font-size: 30px;
+}
+
+ul {
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+li {
+    margin: 8px;
+}
 
 footer {
     background-color: rgb(55, 78, 37);
