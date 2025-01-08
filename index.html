@@ -9,7 +9,8 @@
     <meta name="author" content="Sofia Florylle S. Pantas">
 
     <link rel="stylesheet" href="styles/home.css">
-    <script defer src="scripts/getdate.js"></script>
+    <link rel="stylesheet" href="styles/home-large.css">
+    <script defer src="scripts/home.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,12 +25,15 @@
             <h1>Sofia Florylle S. Pantas</h1>
         </div>
 
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Chamber</a>
-            <a href="#">GitHub Profile</a>
-            <a href="#">LinkedIn</a>
+        <button aria-label="Menu Button" type="button" id="menu"></button>
+
+        <nav class="navigation">
+            <a href="#" id="home" title="Home" class="active">Home</a>
+            <a href="#" id="chamber" title="Chamber">Chamber</a>
+            <a href="#" id="github" title="GitHub Profiles">GitHub Profile</a>
+            <a href="#" id="linkedin" title="LinkedIn">LinkedIn</a>
         </nav>
+
 
     </header>
 
@@ -62,6 +66,7 @@
         <section class="cert card">
             <h2>Web and Computer Programming Certificate</h2>
             <div class="certificates">
+
 
             </div>
         </section>
