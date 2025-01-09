@@ -98,35 +98,34 @@ const courses = [
 
 createCourseCard(courses);
 
-const buttonText = document.querySelector("button");
+const h2Text = document.querySelector("h2");
 
 const allLink = document.querySelector('#all');
 allLink.addEventListener("click", () => {
-    buttonText.textContent = `ALL`;
+    h2Text.textContent = `ALL`;
     createCourseCard(courses);
 });
 
 const cseLink = document.querySelector("#cse");
 cseLink.addEventListener("click", () => {
-    buttonText.textContent = `CSE`;
-    createCourseCard(courses);
+    h2Text.textContent = `CSE`;
+    createCourseCard(courses.filter(course => course.subject.includes("CSE")));
 });
 
 const wddLink = document.querySelector("#wdd");
 wddLink.addEventListener("click", () => {
-    buttonText.textContent = `WDD`;
-    createCourseCard(courses);
+    h2Text.textContent = `WDD`;
+    createCourseCard(courses.filter(course => course.subject.includes("WDD")));
 });
 
 function createCourseCard(filteredCourses) {
     document.querySelector(".certificates").innerHTML = "";
     filteredCourses.forEach(course => {
         let card = document.createElement("button");
-        card.className = "course-card";
+        card.className = course.completed;
         
         card.textContent = `${course.subject} ${course.number}`;
 
         document.querySelector(".certificates").appendChild(card);
-
     })
 }

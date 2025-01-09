@@ -50,4 +50,15 @@
     .link:hover {
         color: green;
     }
+
+    .certificates {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+    }
+
+    .c-nav a {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
 }

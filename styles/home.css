@@ -73,6 +73,7 @@ header {
 }
 
 figcaption {
+    font-family: 'Roboto Condensed', sans-serif;
     font: italic smaller sans-serif;
     text-align: center;
     margin: 10px;
@@ -170,3 +171,46 @@ footer p {
     background-color: rgb(142, 142, 142);
 }
 
+.c-nav {
+    padding: 0.75rem;
+    text-align: center;
+    border-bottom: 2px solid rgb(137, 137, 137);
+}
+
+.c-nav a {
+    text-decoration: none;
+    background-color: black;
+    color: #fff;
+    margin: 3px;
+    padding: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.c-nav a:hover {
+    color: black;
+    background-color: rgb(193, 210, 137);
+}
+
+.certificates {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 50px;
+}
+
+button {
+    padding: 10px;
+    margin: 8px;
+    border: 1px solid #23371f;
+    border-radius: 3px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 17px;
+} 
+
+.true {
+    background-color: rgb(55, 78, 37);
+    color: #fff;   
+}
