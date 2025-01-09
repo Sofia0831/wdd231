@@ -96,25 +96,22 @@ const courses = [
     }
 ];
 
+
 createCourseCard(courses);
 
-const h2Text = document.querySelector("h2");
 
 const allLink = document.querySelector('#all');
 allLink.addEventListener("click", () => {
-    h2Text.textContent = `ALL`;
     createCourseCard(courses);
 });
 
 const cseLink = document.querySelector("#cse");
 cseLink.addEventListener("click", () => {
-    h2Text.textContent = `CSE`;
     createCourseCard(courses.filter(course => course.subject.includes("CSE")));
 });
 
 const wddLink = document.querySelector("#wdd");
 wddLink.addEventListener("click", () => {
-    h2Text.textContent = `WDD`;
     createCourseCard(courses.filter(course => course.subject.includes("WDD")));
 });
 
@@ -128,4 +125,6 @@ function createCourseCard(filteredCourses) {
 
         document.querySelector(".certificates").appendChild(card);
     })
+
 }
+
