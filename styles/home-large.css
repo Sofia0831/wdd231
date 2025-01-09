@@ -11,12 +11,12 @@
         font-family: "Jersey 10", sans-serif;
     }
 
-    nav {
+    .navigation {
         display: flex;
         flex-direction: row;
     }
     
-    nav a {
+    .navigation a {
         display: block;
         text-decoration: none;
         padding: 10px;
@@ -47,7 +47,7 @@
         grid-column: 1/4;
     }
 
-    .card a:hover {
+    .link:hover {
         color: green;
     }
 }

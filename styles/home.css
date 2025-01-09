@@ -13,13 +13,13 @@ header {
 
 }
 
-nav {
+.navigation {
     background-color: black;
     display: flex;
     flex-direction: column;
 }
 
-nav a { 
+.navigation a { 
     display: none;
     text-decoration: none;
     text-align: center;
@@ -31,7 +31,7 @@ nav a {
     border: 1px solid #7e7c7c;
 }
 
-nav a:hover {
+.navigation a:hover {
     color: black;
     background-color: rgb(193, 210, 137);
 }
@@ -98,10 +98,10 @@ li {
     margin: 8px;
 }
 
-.card a {
+.link {
     font-size: 20px;
     font-family: 'Roboto Condensed', sans-serif;
-    color: rgb(39, 105, 190);
+    color: navy;
 }
 
 footer {
@@ -169,3 +169,4 @@ footer p {
     color: rgb(0, 0, 0);
     background-color: rgb(142, 142, 142);
 }
+

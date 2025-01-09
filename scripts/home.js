@@ -95,3 +95,38 @@ const courses = [
         completed: false
     }
 ];
+
+createCourseCard(courses);
+
+const buttonText = document.querySelector("button");
+
+const allLink = document.querySelector('#all');
+allLink.addEventListener("click", () => {
+    buttonText.textContent = `ALL`;
+    createCourseCard(courses);
+});
+
+const cseLink = document.querySelector("#cse");
+cseLink.addEventListener("click", () => {
+    buttonText.textContent = `CSE`;
+    createCourseCard(courses);
+});
+
+const wddLink = document.querySelector("#wdd");
+wddLink.addEventListener("click", () => {
+    buttonText.textContent = `WDD`;
+    createCourseCard(courses);
+});
+
+function createCourseCard(filteredCourses) {
+    document.querySelector(".certificates").innerHTML = "";
+    filteredCourses.forEach(course => {
+        let card = document.createElement("button");
+        card.className = "course-card";
+        
+        card.textContent = `${course.subject} ${course.number}`;
+
+        document.querySelector(".certificates").appendChild(card);
+
+    })
+}
