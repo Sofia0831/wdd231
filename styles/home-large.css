@@ -38,11 +38,7 @@
     .card {
         margin: 0.75rem;
     }
-
-    .card img {
-        text-align: center;
-    }
-    
+        
     .cert {
         grid-column: 1/4;
     }
