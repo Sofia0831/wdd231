@@ -50,7 +50,7 @@ header {
 .profile h1 {
     color: aliceblue;
     margin: 15px;
-    font-size: 33px;
+    font-size: 40px;
     font-family: "Jersey 10", sans-serif;
 }
 
@@ -180,7 +180,7 @@ footer p {
     padding: 5px;
     padding-left: 30px;
     padding-right: 30px;
-    font-size: 24px;
+    font-size: 25px;
     border-radius: 5px;
     font-family: 'Jersey 10', sans-serif;
     font-weight: 500;
