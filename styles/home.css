@@ -180,10 +180,10 @@ footer p {
     padding: 5px;
     padding-left: 30px;
     padding-right: 30px;
-    font-size: 27px;
+    font-size: 32px;
     border-radius: 5px;
     font-family: 'Jersey 10', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .c-nav a:hover {
