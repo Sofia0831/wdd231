@@ -25,7 +25,7 @@ header {
     text-align: center;
     padding: 1rem;
     color: white;
-    font-size: 23px;
+    font-size: 30px;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 700;
     border: 1px solid #7e7c7c;
@@ -50,7 +50,7 @@ header {
 .profile h1 {
     color: aliceblue;
     margin: 15px;
-    font-size: 40px;
+    font-size: 43px;
     font-family: "Jersey 10", sans-serif;
 }
 
@@ -88,7 +88,7 @@ figcaption {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     font-family: 'Jersey 10', sans-serif;
-    font-size: 35px;
+    font-size: 40px;
 }
 
 ul {
@@ -180,10 +180,10 @@ footer p {
     padding: 5px;
     padding-left: 30px;
     padding-right: 30px;
-    font-size: 24px;
+    font-size: 27px;
     border-radius: 5px;
     font-family: 'Jersey 10', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .c-nav a:hover {
@@ -203,7 +203,7 @@ button {
     border: 1px solid #23371f;
     border-radius: 3px;
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 17px;
+    font-size: 20px;
 } 
 
 .true {
