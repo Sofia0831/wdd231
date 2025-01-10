@@ -211,6 +211,10 @@ button {
     color: #fff;   
 }
 
+.true::before {
+    content: "✔ ";
+}
+
 .credits {
     text-align: center;
     margin-top: 15px;
