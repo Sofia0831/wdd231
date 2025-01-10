@@ -81,7 +81,7 @@ figcaption {
     margin-bottom: 20px;
 }
 
-h2 {
+.heading {
     text-align: center;
     background-color: rgb(109, 136, 91);
     padding: 0.75rem;
@@ -180,10 +180,10 @@ footer p {
     padding: 5px;
     padding-left: 30px;
     padding-right: 30px;
-    font-size: 20px;
+    font-size: 24px;
     border-radius: 5px;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 600;
+    font-family: 'Jersey 10', sans-serif;
+    font-weight: 500;
 }
 
 .c-nav a:hover {
@@ -209,4 +209,12 @@ button {
 .true {
     background-color: rgb(55, 78, 37);
     color: #fff;   
+}
+
+.credits {
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
 }

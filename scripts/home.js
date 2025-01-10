@@ -99,19 +99,29 @@ const courses = [
 
 createCourseCard(courses);
 
+const h2Text = document.querySelector('h2.credits');
 
 const allLink = document.querySelector('#all');
 allLink.addEventListener("click", () => {
+    const totalCredits = courses.reduce((acc, course) => acc + course.credits, 0);
+    h2Text.textContent = `Total Credits: ${totalCredits}`;
+    // h2Text.textContent = `All`;
     createCourseCard(courses);
 });
 
-const cseLink = document.querySelector("#cse");
+const cseLink = document.querySelector('#cse');
 cseLink.addEventListener("click", () => {
+    const totalCredits = courses.filter(course => course.subject.includes("CSE")).reduce((acc, course) => acc + course.credits, 0);
+    h2Text.textContent = `Total Credits: ${totalCredits}`;
+    // h2Text.textContent = `CSE`;
     createCourseCard(courses.filter(course => course.subject.includes("CSE")));
 });
 
-const wddLink = document.querySelector("#wdd");
+const wddLink = document.querySelector('#wdd');
 wddLink.addEventListener("click", () => {
+    const totalCredits = courses.filter(course => course.subject.includes("WDD")).reduce((acc, course) => acc + course.credits, 0);
+    h2Text.textContent = `Total Credits: ${totalCredits}`;
+    // h2Text.textContent = `WDD`;
     createCourseCard(courses.filter(course => course.subject.includes("WDD")));
 });
 
@@ -127,4 +137,12 @@ function createCourseCard(filteredCourses) {
     })
 
 }
+
+// function addCredits(filteredCourses){
+//     const totalCredits = filteredCourses.reduce((acc, course) => acc + course.credits, 0);
+//     h2Text.textContent = `The total number of credits is: ${totalCredits} Credits`;
+// }
+
+// addCredits(courses);
+
 
