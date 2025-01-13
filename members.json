@@ -1,0 +1,26 @@
+{
+    "familyName": "Pantas",
+    "moveDate": "2024-12-10",
+    "number": 3,
+    "visitedBishopric": true,
+    "members": 
+    [
+        {
+            "name": "Fatima Sarabia",
+            "gender": "female",
+            "birth": "1968-04-02"
+        },
+
+        {
+            "name": "Deonil Froy Pantas",
+            "gender": "male",
+            "birth": "1997-5-02"
+        },
+
+        {
+            "name": "Sofia Florylle Pantas",
+            "gender": "no",
+            "birth": "2003-03-15"
+        }
+    ]
+}
