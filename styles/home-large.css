@@ -5,14 +5,18 @@
     }
 
     ul.menuLinks, ul.menuLinks.open {
+        width: 100%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
     }
 
     ul.menuLinks li a {
         border: none;
-        padding: 1rem 8.29rem;
     }
+
+    .menuLinks li {
+        flex: 1;
+      }
 
     .navigation {
         grid-template-rows: 1fr;
