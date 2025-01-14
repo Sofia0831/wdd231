@@ -4,27 +4,26 @@
         display: none;
     }
 
-    .profile h1 {
-        color: aliceblue;
-        margin: 20px;
-        font-size: 60px;
-        font-family: "Jersey 10", sans-serif;
+    ul.menuLinks, ul.menuLinks.open {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    ul.menuLinks li a {
+        border: none;
+        padding: 1rem 6.04rem;
     }
 
     .navigation {
-        display: flex;
-        flex-direction: row;
+        grid-template-rows: 1fr;
+    }
+
+    .profile h1 {
+        color: aliceblue;
+        font-size: 60px;
+        font-family: "Jersey 10", sans-serif;
     }
     
-    .navigation a {
-        display: block;
-        text-decoration: none;
-        padding: 10px;
-        flex: 1 1 100%;
-        text-align: center;
-        font-size: 25px;
-        border: none;
-    }
     
     main {
         max-width: 1400px;

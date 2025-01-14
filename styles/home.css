@@ -14,27 +14,70 @@ header {
 }
 
 .navigation {
+    display: grid;
     background-color: black;
-    display: flex;
-    flex-direction: column;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
 }
 
-.navigation a { 
-    display: none;
-    text-decoration: none;
-    text-align: center;
-    padding: 1rem;
-    color: white;
-    font-size: 30px;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 700;
+.navigation ul {
+    overflow: hidden;
+}
+
+.navigation.open {
+    grid-template-rows: 1fr;
+}
+
+
+ul.menuLinks li a {
     border: 1px solid #7e7c7c;
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    
 }
 
-.navigation a:hover {
+ul.menuLinks a:hover {
     color: black;
     background-color: rgb(193, 210, 137);
 }
+
+ul.menuLinks {
+    list-style-type: none;
+}
+/* 
+ul.open {
+    display: block;
+} */
+
+#menu::before {
+	content: "☰";
+    color: #fff;
+}
+
+#menu.open::before {
+	content: "X";
+    color: #fff;
+}
+
+#menu {
+	font-size: 2rem;
+	border: 0;
+	background: none;
+	position: absolute;
+	top: 0.1rem;
+	right: 0.25rem;
+}
+
+.active {
+    color: rgb(0, 0, 0);
+    background-color: rgb(142, 142, 142);
+}
+
 
 .profile {
     padding: 1rem;
@@ -91,11 +134,11 @@ figcaption {
     font-size: 35px;
 }
 
-ul {
+.courselink {
     margin: 30px;
 }
 
-li {
+.courselink li {
     margin: 8px;
 }
 
@@ -136,34 +179,6 @@ footer p {
     padding-top: 0.5rem;
     color: rgb(230, 230, 230);
     
-}
-
-#menu::before {
-	content: "☰";
-    color: #fff;
-}
-
-#menu.open::before {
-	content: "X";
-    color: #fff;
-}
-
-#menu {
-	font-size: 2rem;
-	border: 0;
-	background: none;
-	position: absolute;
-	top: 0.1rem;
-	right: 0.25rem;
-}
-
-.open a {
-	display: block;
-}
-
-.active {
-    color: rgb(0, 0, 0);
-    background-color: rgb(142, 142, 142);
 }
 
 .c-nav {
