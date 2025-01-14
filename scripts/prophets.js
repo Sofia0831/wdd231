@@ -45,6 +45,18 @@ yearsLink.addEventListener("click", () => {
     getProphetData().then(prophets => displayProphets(prophets.filter(prophet => prophet.length >= 15)));
 });
 
+function getOrderSuffix(order) {
+    if (order === 1) {
+      return "st";
+    } else if (order === 2) {
+      return "nd";
+    } else if (order === 3) {
+      return "rd";
+    } else {
+      return "th";
+    }
+  }
+
 function displayProphets(prophets) {
     document.querySelector("#cards").innerHTML = "";
     prophets.forEach((prophet) => {
@@ -53,11 +65,15 @@ function displayProphets(prophets) {
 
         let fullName = document.createElement('h2');
         fullName.className = 'name';
+        fullName.textContent = `${prophet.name} ${prophet.lastname}`;
 
         let portrait = document.createElement('img');
         portrait.className = 'pic';
 
-        fullName.textContent = `${prophet.name} ${prophet.lastname}`;
+        let order = document.createElement('p');
+        order.className = 'order';
+        order.textContent = `The ${prophet.order}${getOrderSuffix(prophet.order)} Prophet of the Church of Jesus Christ of Latter-Day Saints`;
+
 
         portrait.setAttribute('src', prophet.imageurl);
         portrait.setAttribute('alt', 'Portrait of ${prophet.lastname}');
@@ -67,6 +83,7 @@ function displayProphets(prophets) {
 
         card.appendChild(fullName);
         card.appendChild(portrait);
+        card.appendChild(order);
 
         cards.appendChild(card);
 
