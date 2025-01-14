@@ -70,9 +70,17 @@ function displayProphets(prophets) {
         let portrait = document.createElement('img');
         portrait.className = 'pic';
 
-        let order = document.createElement('p');
+        let order = document.createElement('h4');
         order.className = 'order';
         order.textContent = `The ${prophet.order}${getOrderSuffix(prophet.order)} Prophet of the Church of Jesus Christ of Latter-Day Saints`;
+
+        let birthdate = document.createElement('p');
+        birthdate.className = 'birthdate';
+        birthdate.textContent = `Date of Birth: ${prophet.birthdate}`;
+
+        let birthplace = document.createElement('p');
+        birthplace.className = 'birthplace';
+        birthplace.textContent = `Place of Birth: ${prophet.birthplace}`;
 
 
         portrait.setAttribute('src', prophet.imageurl);
@@ -82,6 +90,8 @@ function displayProphets(prophets) {
         portrait.setAttribute('height', '440');
 
         card.appendChild(fullName);
+        card.appendChild(birthdate);
+        card.appendChild(birthplace);
         card.appendChild(portrait);
         card.appendChild(order);
 
