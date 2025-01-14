@@ -41,9 +41,9 @@ nav a:hover {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(360px,1fr));
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .c-prophets {
@@ -60,6 +60,7 @@ nav a:hover {
 .order {
     padding: 2rem;
 }
+
 
 @media (min-width:600px) {
     .c-prophets {
