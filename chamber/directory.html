@@ -12,8 +12,12 @@
     <meta property="og:image" content="#">
     <meta property="og:url" content="https://sofia0831.github.io/wdd231/chamber/directory.html">
 
+    <link rel="stylesheet" href="styles/normalize.css">
+
     <link rel="stylesheet" href="styles/directory-small.css">
     <link rel="stylesheet" href="styles/directory-large.css">
+
+    <script defer src="scripts/directory.js"></script>
 
     <link rel="icon" href="chamber-favicon.ico" type="image/x-icon">
 
@@ -22,27 +26,43 @@
 <body>
     <header>
         <div class="profile">
-            <img src="#" alt="placeholder image">
-            <h1>Name Placeholder</h1>
+            <img src="images/logo.svg" alt="placeholder image" width="100px" height="100px">
+            <div class="name">
+                <h1>Biliran</h1>
+                <p>Chamber of Commerce</p>
+            </div>
+            <button id="menu"></button>
+        </div>
+        <div class="nav">
+            <nav class="navigation" id="animate">
+                <ul class="menuLinks">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#" class="active">Directory</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Discover</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <nav>
-        <ul class="menuLinks">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Directory</a></li>
-            <li><a href="#">Join</a></li>
-            <li><a href="#">Discover</a></li>
-        </ul>
-    </nav>
-
     <main>
         <div class="banner">
-
+            <img src="" alt="Placeholder Image">
         </div>
 
         <div class="home">
-
+            <section class="events">
+                <h2>Events</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dignissimos repudiandae natus qui saepe corporis perspiciatis sunt enim quod! Quia, velit. Quas quae eaque natus dolore reiciendis, dolorem facilis dignissimos.</p>
+            </section>
+            <section class="weather">
+                <h2>Current Weather</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, eius sit quis dolore officiis fugit totam esse! Accusantium, cumque sapiente. Adipisci fugiat sint culpa consequuntur, quam alias in laudantium impedit?</p>
+            </section>
+            <section class="forecast">
+                <h2>Weather Forecast</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolorem modi fugit eum quaerat, doloribus temporibus magni fuga harum dolorum vero obcaecati voluptate molestiae ea animi culpa fugiat doloremque assumenda.</p>
+            </section>
         </div>
 
         <div class="business-cards">
@@ -52,14 +72,36 @@
 
     <footer>
         <div class="chamber-info">
-
+            <span>Biliran Chamber of Commerce</span>
+            <p>6560 P.I. Garcia Naval <br>
+                Biliran, Philippines <br>
+                info@bilirancc.org <br>
+                +639658433082
+            </p>
         </div>
 
         <div class="socmed">
-
+            <a href="">
+                <img src="images/youtube.svg" alt="Youtube" width="60px" height="60px">
+            </a>
+            <a href="">
+                <img src="images/twitter.svg" alt="Twitter" width="60px" height="60px">
+            </a>
+            <a href="">
+                <img src="images/linkedin.svg" alt="LinkedIn"width="60px" height="60px">
+            </a>
         </div>
-            <p>placeholder info</p>
-        <div class="student-info"></div>
+
+        <div class="student-info">
+            <p>
+                WDD 231 Class Project <br>
+                Sofia Florylle S. Pantas <br>
+            </p>
+            <p>
+                &copy;<span id="currentyear"></span>
+            </p>
+            <p id="lastModified"></p>
+        </div>
     </footer>
 </body>
 

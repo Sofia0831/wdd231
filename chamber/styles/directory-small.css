@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #2c4f3f;
+    --secondary-color: #0c2219;
+    --background-color: #000000;
+    --accent1-color: #FFFFFF;
+    --accent2-color: #c9c9c9;
+
+    --heading-font: 'Bebas Neue', sans-serif;
+    --paragraph-font: 'Arial', sans-serif;
+    
+}
+
+
+header, footer {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    color: var(--accent1-color);
+    font-family: var(--heading-font);
+
+}
+
+
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.name h1 {
+    font-size: 70px;
+    padding: 0;
+    margin: 0;
+}
+
+.name p {
+    position:absolute;
+    top: 90px;
+    font-size: 20px;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-bottom: 0.50rem;
+}
+
+.nav {
+    padding-top: 15px;
+}
+
+.navigation {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+.navigation ul {
+    overflow: hidden;
+}
+
+.navigation.open {
+    grid-template-rows: 1fr;
+}
+
+
+ul.menuLinks li a {
+    background-color: var(--primary-color);
+    border: 1px solid #7e7c7c;
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    font-family: var(--heading-font);
+    font-size: 30px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+}
+
+ul.menuLinks li a.active {
+    color: var(--background-color);
+    background-color: var(--accent2-color);
+}
+
+
+ul.menuLinks li a:hover {
+    color: var(--secondary-color);
+    background-color: var(--accent1-color);
+}
+
+ul.menuLinks {
+    list-style-type: none;
+}
+
+#menu::before {
+	content: "☰";
+    font-size: 70px;
+    color: var(--accent1-color);
+}
+
+#menu.open::before {
+	content: "X";
+    color: var(--accent1-color);
+}
+
+#menu {
+	font-size: 2rem;
+	border: 0;
+	background: none;
+	position: absolute;
+	top: 0.75rem;
+	right: 1rem;
+}
+
+
+body {
+    background-color: var(--accent2-color);
+}
+
+.banner {
+    padding: 1rem;
+}
+
+.home {
+    padding: 1rem;
+}
+
+.home h2 {
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+    padding: 0.50rem;
+    padding-left: 1rem;
+    font-family: var(--heading-font);
+    font-size: 30px;
+    font-weight: 500;
+}
+
+section {
+    background-color: var(--accent1-color);
+    margin: 20px 0;
+}
+
+section p {
+    padding: 1rem;
+    font-family: var(--paragraph-font);
+    color: var(--background-color);
+}
+
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+footer p {
+    font-size: 15px;
+}
+
+footer div {
+    margin: 10px 0;
+}
+
+.socmed {
+    padding-top: 1rem;
+}
+
+.socmed a {
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+
+
+
+
