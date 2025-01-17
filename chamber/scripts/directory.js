@@ -26,9 +26,9 @@ fetch(apiUrl)
 
 		weatherInfo.innerHTML = `
 		<img src="${iconUrl}" alt="${data.weather[0].description}" width="80">
-		<p>Temperature: ${data.main.temp}°C <br>
-		Description: ${data.weather[0].description} <br>
-		Humidity: ${data.main.humidity}%</p>
+		<p>Temperature: <strong>${data.main.temp}°C </strong> <br>
+		Description: <strong>${data.weather[0].description}</strong> <br>
+		Humidity: <strong>${data.main.humidity}% </strong></p>
 		`;
 	})
 	.catch(error => {
