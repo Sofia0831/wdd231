@@ -186,6 +186,10 @@ section p {
     flex-direction: row;
 }
 
+#weather-info p {
+    line-height: 25px;
+}
+
 
 footer {
     display: flex;
