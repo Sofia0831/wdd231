@@ -44,6 +44,10 @@
         grid-gap: 15px;
     }
 
+    section {
+        margin: 20px 0;
+    }
+
     footer {
         flex-direction: row;
         justify-content: space-evenly;

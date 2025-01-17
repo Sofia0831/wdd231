@@ -47,7 +47,12 @@
 
     <main>
         <div class="banner">
-            <img src="" alt="Placeholder Image">
+            <picture>
+                <source srcset="images/banner-large.webp" media="(min-width: 750px)">
+                <img src="images/banner-small.webp" alt="Local workers from Biliran">
+            </picture>
+
+            <a href="#">Keynote Tickets</a>
         </div>
 
         <div class="home">
@@ -55,13 +60,19 @@
                 <h2>Events</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dignissimos repudiandae natus qui saepe corporis perspiciatis sunt enim quod! Quia, velit. Quas quae eaque natus dolore reiciendis, dolorem facilis dignissimos.</p>
             </section>
+            
             <section class="weather">
                 <h2>Current Weather</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, eius sit quis dolore officiis fugit totam esse! Accusantium, cumque sapiente. Adipisci fugiat sint culpa consequuntur, quam alias in laudantium impedit?</p>
+                <div id="weather-info">
+                    
+                </div>   
             </section>
+
             <section class="forecast">
                 <h2>Weather Forecast</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolorem modi fugit eum quaerat, doloribus temporibus magni fuga harum dolorum vero obcaecati voluptate molestiae ea animi culpa fugiat doloremque assumenda.</p>
+                <div id="forecast-info">
+
+                </div>
             </section>
         </div>
 
