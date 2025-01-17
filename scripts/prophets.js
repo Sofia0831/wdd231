@@ -19,7 +19,7 @@ async function getProphetData() {
         // displayProphets(data.prophets);
     } 
     catch (error) {
-        console.error("Error fetching prophrt data:", error);
+        console.error("Error fetching prophet data:", error);
     }
 }
 
