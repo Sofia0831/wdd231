@@ -27,10 +27,19 @@ fetch(apiUrl)
 		};
 		const iconUrl = weatherIcons[data.weather[0].main] || 'images/uknown.svg';
 
+		const weatherDesc = data.weather[0].description;
+		const words = weatherDesc.split(' ');
+		const capitalizedWords = words.map(word => {
+			return word.charAt(0).toUpperCase() + word.slice(1);
+		});
+
+		const capitalDesc = capitalizedWords.join(' '); 
+
 		weatherInfo.innerHTML = `
 		<img src="${iconUrl}" alt="${data.weather[0].description}" width="80">
+
 		<p>Temperature: <strong>${data.main.temp}°C </strong> <br>
-		Description: <strong>${data.weather[0].description}</strong> <br>
+		Description: <strong>${capitalDesc}</strong> <br>
 		Humidity: <strong>${data.main.humidity}% </strong></p>
 		`;
 })
