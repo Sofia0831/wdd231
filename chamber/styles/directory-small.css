@@ -224,13 +224,13 @@ section p {
 
 .p-container p {
     margin: 0;
-    padding: 0 1rem;
-    font-size: 10px;
+    padding: 0 1rem 0.50rem 1rem;
+    font-size: 15px;
 }
 
 .p-container span {
     font-family: var(--heading-font);
-    font-size: 13px;
+    font-size: 18px;
     color: var(--secondary-color);
 }
 
