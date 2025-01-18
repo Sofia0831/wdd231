@@ -50,10 +50,18 @@
     section {
         margin: 20px 0;
     }
+      
 
     footer {
         flex-direction: row;
         justify-content: space-evenly;
     }
+
+    #business-cards.list {
+        display: flex;
+        flex-direction: column; 
+        padding: 0;
+    }
+
 
 }

@@ -71,6 +71,24 @@ fetch(forecastUrl)
   forecastInfo.innerHTML = 'Error fetching weather data.';
 });
 
+//GRID-LIST BUTTON
+const gridbutton = document.querySelector("#grid");
+const listbutton = document.querySelector("#list");
+
+const display = document.querySelector("#business-cards");
+
+gridbutton.addEventListener("click", () => {
+	display.classList.add("grid");
+	display.classList.remove("list");
+});
+
+listbutton.addEventListener("click", showList);
+
+function showList() {
+	display.classList.add("list");
+	display.classList.remove("grid");
+}
+
 //CARDS
 const businessUrl = 'data/members.json';
 const cards = document.querySelector('#business-cards');
@@ -119,15 +137,15 @@ function displayBusiness(businesses) {
 
 		let address = document.createElement('p');
 		address.className = 'address';
-		address.innerHTML = `<span>Address:</span> ${business.address}`;
+		address.innerHTML = `${business.address}`;
 
 		let number = document.createElement('p');
 		number.className = 'number';
-		number.innerHTML = `<span>Number:</span> ${business.number}`;
+		number.innerHTML = `${business.number}`;
 
 		let site = document.createElement('p');
 		site.className ='site';
-		site.innerHTML = `<span>URL:</span> ${business.website}`;
+		site.innerHTML = `${business.website}`;
 
 		let level = document.createElement('p');
 		level.className = 'level';
@@ -145,7 +163,7 @@ function displayBusiness(businesses) {
 		container.appendChild(address);
 		container.appendChild(number);
 		container.appendChild(site);
-		container.appendChild(level);
+		businessName.appendChild(level);
 
 		cards.appendChild(card);
 	});

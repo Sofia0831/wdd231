@@ -168,6 +168,20 @@ body {
     font-weight: 500;
 }
 
+.menu-button {
+	text-align: center;
+    padding: 1rem;
+}
+
+.menu-button button {
+    padding: 0.75rem 35px;
+    background-color: var(--primary-color);
+}
+
+.menu-button button:hover {
+    background-color: var(--secondary-color);
+}
+
 section {
     background-color: var(--accent1-color);
     margin: 15px;
@@ -207,9 +221,16 @@ section p {
     text-align: center;
     padding-top: 1rem;
     padding-bottom: 0.50rem;
+    font-size: 30px;
     font-family: var(--heading-font);
     border-bottom: 1px solid var(--secondary-color);
     color: var(--secondary-color);
+}
+
+.level {
+    padding: 0.25rem 0 0 0;
+    font-weight: 100;
+    font-size: 15px;
 }
 
 .info-container {
@@ -218,7 +239,7 @@ section p {
 
 .p-container {
     text-align: left;
-    line-height: 15pt;
+    line-height: 13pt;
     padding: 1rem 0;
 }
 
@@ -243,6 +264,41 @@ section p {
     border-radius: 50%;
     border: 2px solid var(--secondary-color);
 }
+
+.list {
+	display: flex;
+	flex-direction: column;
+}
+
+.list section {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 0;
+    padding: 0.50rem;
+    border-radius: 0;
+    border: none;
+}
+
+.list section img {
+	display: none;
+}
+
+.list section h2 {
+    font-size: 1rem;
+	font-family: var(--paragraph-font);
+    border-bottom: none;
+}
+
+.list .p-container {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+.list section:nth-child(even) {
+	background-color: #bed;
+}
+
 
 
 footer {
