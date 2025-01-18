@@ -119,7 +119,7 @@ function displayBusiness(businesses) {
 
 		let businessName = document.createElement('h2');
 		businessName.className = 'business-name';
-		businessName.textContent = `${business.name}`;
+		businessName.innerHTML = `${business.name}`;
 
 		let logoContainer = document.createElement('div');
 		logoContainer.className = 'logo-container';

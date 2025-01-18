@@ -293,13 +293,20 @@ section p {
     display: flex;
     flex-direction: row;
     text-align: left;
+    justify-content: space-between;
+}
+
+.list .level {
+    display: none;
+}
+
+.list section .b-cards {
+    padding: 0;
 }
 
 .list section:nth-child(even) {
-	background-color: #bed;
+	background-color:#e2f5e0;
 }
-
-
 
 footer {
     display: flex;
