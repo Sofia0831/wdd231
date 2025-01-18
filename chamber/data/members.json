@@ -2,7 +2,7 @@
     "members": [
         {
             "name": "Jusa's Tropical Smoothie Cafe",
-            "address": "P. Inocentes St, Brgy P.I. Garcia, Naval, Biliran, Philippines",
+            "address": "536 P. Inocentes St, Naval, Biliran, Philippines",
             "number": "0967 061 4454",
             "website": "https://www.facebook.com /jusastropicalsmoothiecafe/",
             "image": "images/jusas.webp",
@@ -18,7 +18,7 @@
         },
         {
             "name": "Seoul Focha",
-            "address": "H97X+695, P. Inocentes St, Naval, Biliran, Philippines",
+            "address": "695, P. Inocentes St, Naval, Biliran, Philippines",
             "number": "0954 458 1657",
             "website": "https://www.facebook.com/ profile.php?id=61568197062727",
             "image": "images/seoul-foucha.webp",
@@ -42,7 +42,7 @@
         },
         {
             "name": "Forever Cafe and Lounge",
-            "address": "P. Inocentes St, sine sing mo to bldg., Naval, Biliran Philippines",
+            "address": "P. Inocentes St, sine sing mo to bldg., Naval, Biliran, Philippines",
             "number": "0968 880 5833",
             "website": "https://www.facebook.com /forevercafelounge",
             "image": "images/forever.webp",
