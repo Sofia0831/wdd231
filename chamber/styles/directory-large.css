@@ -4,32 +4,35 @@
         justify-content: space-between;
     }
 
-    #menu {
-        display: none;
+    @media (min-width:1000px){
+        #menu {
+            display: none;
+        }
+
+        .navigation {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+        }
+    
+        ul.menuLinks, ul.menuLinks.open {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+    
+        ul.menuLinks li a {
+            display: block;
+            flex: 1 1 100%;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    
+        .menuLinks li {
+            flex: 1;
+        }
     }
 
-    .navigation {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-    }
-
-    ul.menuLinks, ul.menuLinks.open {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-    }
-
-    ul.menuLinks li a {
-        display: block;
-		flex: 1 1 100%;
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-
-    .menuLinks li {
-        flex: 1;
-    }
 
     main {
         max-width: 1400px;
