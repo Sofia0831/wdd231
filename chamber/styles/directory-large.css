@@ -33,6 +33,15 @@
         }
     }
 
+    .name h1 {
+        font-size: 70px;
+        padding-top: 0;   
+    }
+
+    .name p {
+        font-size: 20px;
+    }
+
 
     main {
         max-width: 1500px;
@@ -73,6 +82,7 @@
     #business-cards {
         margin-left: 6rem;
         margin-right: 6rem;
+        margin-bottom: 1rem;
     
     }
 
