@@ -1,13 +1,18 @@
 @media (min-width:600px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
 
     @media (min-width:1000px){
-        header {
-            display: flex;
-            justify-content: space-between;
-        }
-        
         #menu {
             display: none;
+        }
+
+        .navigation {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
         }
     
         ul.menuLinks, ul.menuLinks.open {
