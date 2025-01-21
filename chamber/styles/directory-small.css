@@ -195,13 +195,18 @@ section p {
     font-size: 17px;
 }
 
-#weather-info {
+.weather-container {
     display: flex;
     flex-direction: row;
+    background-color: rgb(210, 228, 192);
 }
 
-#weather-info p {
-    line-height: 25px;
+#weather-info p, #forecast-info p {
+    font-size: 15px;
+}
+
+#forecast-info {
+    background-color: rgb(210, 228, 192);
 }
 
 #business-cards {

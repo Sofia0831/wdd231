@@ -9,45 +9,44 @@ hamButton.addEventListener('click', () => {
 
 
 // WEATHER
+const weatherTemp = document.querySelector('#weather-info');
+const weatherIcon = document.querySelector('#weather-icon');
+const weatherDesc = document.querySelector('figcaption');
+
 const apiKey = '884d02f5eb1903be4f0c638b89335b31';
-const city = 'Biliran';
-const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+const lat = "11.56";
+const long = "124.40";
+const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
+const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
 
-fetch(apiUrl)
-	.then(response => response.json())
-	.then (data => {
-		const weatherInfo = document.getElementById('weather-info');
-		const weatherIcons = {
-			'Clear': 'images/clear.svg',
-			'Clouds': 'images/clouds.svg',
-			'Rain': 'images/rain.svg',
-			'Drizzle': 'images/drizzle.svg',
-			'Thunderstorm': 'images/thunderstorm.svg'
-		};
-		const iconUrl = weatherIcons[data.weather[0].main] || 'images/uknown.svg';
+async function apiFetch() {
+	try {
+	  const response = await fetch(apiUrl);
+	  if (response.ok) {
+	    const data = await response.json();
+	    displayResults(data); 	
+	  } else {
+	      throw Error(await response.text());
+	  }
+	} catch (error) {
+	    console.log(error);
+	}
+}
+  
+apiFetch();
 
-		const weatherDesc = data.weather[0].description;
-		const words = weatherDesc.split(' ');
-		const capitalizedWords = words.map(word => {
-			return word.charAt(0).toUpperCase() + word.slice(1);
-		});
+function displayResults(data) {
+	let desc = data.weather[0].description;
+	const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+	weatherIcon.setAttribute('src', iconsrc);
+    weatherIcon.setAttribute('alt', `${desc} icon`);
 
-		const capitalDesc = capitalizedWords.join(' '); 
-
-		weatherInfo.innerHTML = `
-		<img src="${iconUrl}" alt="${data.weather[0].description}" width="80">
-
-		<p>Temperature: <strong>${data.main.temp}°C </strong> <br>
-		Description: <strong>${capitalDesc}</strong> <br>
-		Humidity: <strong>${data.main.humidity}% </strong></p>
-		`;
-})
-.catch(error => {
-    console.error('Error fetching weather data:', error);
-    const weatherInfo = document.getElementById('weather-info');
-    weatherInfo.innerHTML = 'Error fetching weather data.';
-});
+	weatherTemp.innerHTML = `
+	<p><strong>Temp:</strong> ${data.main.temp}&deg;C</p>
+	<p><strong>Description:</strong> ${desc}</p>
+	<p><strong>Humidity:</strong> ${data.main.humidity}%</p>
+	`;
+}
 
 
 fetch(forecastUrl)

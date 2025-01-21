@@ -32,6 +32,10 @@
         .menuLinks li {
             flex: 1;
         }
+
+        #weather-info p {
+            font-size: 1.5vw;
+        }
     }
 
     .name h1 {
@@ -87,5 +91,7 @@
     
     }
 
-
+    #forecast-info p {
+        font-size: 2vw;
+    }
 }
