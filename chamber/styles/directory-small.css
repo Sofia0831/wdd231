@@ -279,6 +279,13 @@ footer div {
 
 /* DIRECTORY */
 
+.directory {
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 12vw;
+
+}
+
 #business-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
