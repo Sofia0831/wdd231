@@ -299,7 +299,6 @@ footer div {
 }
 
 .b-cards {
-    border-radius: 20px;
     background-color: var(--accent1-color);
     margin: 10px;
     border: 2px solid var(--secondary-color);
