@@ -38,14 +38,18 @@ apiFetch();
 function displayResults(data) {
 	let desc = data.weather[0].description.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 	const roundedTemp = Math.round(data.main.temp);
+	const roundedLow = Math.round(data.main.temp_min);
+	const roundedHigh = Math.round(data.main.temp_max);
 	const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 	weatherIcon.setAttribute('src', iconsrc);
     weatherIcon.setAttribute('alt', `${desc} icon`);
 
 	weatherTemp.innerHTML = `
-	<p><strong>Temp:</strong> ${roundedTemp}&deg;C</p>
-	<p><strong>Description:</strong> ${desc}</p>
-	<p><strong>Humidity:</strong> ${data.main.humidity}%</p>
+	<p><strong>${roundedTemp}&deg;C</strong> <br>
+	${desc} <br>
+	Low: <strong>${roundedLow}&deg;C</strong> <br>
+	High: <strong>${roundedHigh}&deg;C</strong> <br>
+	Humidity:<strong>${data.main.humidity}%</strong></p>
 	`;
 }
 
