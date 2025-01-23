@@ -66,8 +66,8 @@ function displayBusiness(businesses) {
 		portrait.setAttribute('src', business.image);
 		portrait.setAttribute('alt', '${business.name} logo');
 		portrait.setAttribute('loading', 'lazy');
-		portrait.setAttribute('width', '70');
-		portrait.setAttribute('height', '70');
+		portrait.setAttribute('width', '100');
+		portrait.setAttribute('height', '100');
 
 		let container = document.createElement('div');
 		container.className = 'p-container';
