@@ -379,7 +379,8 @@ footer div {
 }
 
 .list .level {
-    display: none;
+    margin-top: 5px;
+    font-size: 3vw;
 }
 
 .list p {
