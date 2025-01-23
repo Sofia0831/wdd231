@@ -49,7 +49,7 @@ function displayResults(data) {
 	${desc} <br>
 	Low: <strong>${roundedLow}&deg;C</strong> <br>
 	High: <strong>${roundedHigh}&deg;C</strong> <br>
-	Humidity:<strong>${data.main.humidity}%</strong></p>
+	Humidity: <strong>${data.main.humidity}%</strong></p>
 	`;
 }
 
