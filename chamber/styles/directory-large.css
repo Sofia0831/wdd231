@@ -1,4 +1,12 @@
 @media (min-width:600px) {
+    
+    .info-box h1{
+        font-size: 30px;
+    }
+
+    .info-box p {
+        font-size: 15px;
+    }
 
     @media (min-width:1000px){
         header {
@@ -36,6 +44,20 @@
         #weather-info p {
             font-size: 1.5vw;
         }
+
+        .info-box {
+            max-width: 590px;
+            margin: 30px;
+        }
+
+        .info-box p {
+            font-size: 17px;
+        }
+        
+        .info-box h1 {
+            font-size: 40px;
+        }
+
     }
 
     .name h1 {
@@ -92,6 +114,12 @@
     }
 
     #forecast-info p {
-        font-size: 2vw;
+        font-size: 1.8vw;
     }
+
+    .button-con a {
+        font-size: 20px;
+        padding: 0.50rem 2rem;
+    }
+
 }

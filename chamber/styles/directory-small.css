@@ -1,3 +1,4 @@
+/* ALL PAGES */
 
 * {
     margin: 0;
@@ -125,13 +126,14 @@ body {
 }
 
 
-.banner img {
+.banner img, .banner-home img {
     width: 100%;
     height: auto;
     border: 2px solid var(--secondary-color);
 }
 
-.banner {
+
+.banner, .banner-home {
     position: relative;
     padding: 1rem;
     padding-bottom: 0;
@@ -152,6 +154,48 @@ body {
 
 .banner a:hover {
     background-color: var(--accent1-color);
+    color: var(--text-color);
+}
+
+.info-box {
+    position: absolute;
+    background-color: rgb(44, 79, 63, 0.9);
+    color: var(--accent1-color);
+    padding: 2rem;
+    margin: 20px 30px 20px 20px;
+}
+
+.info-box h1 {
+    font-family: var(--heading-font);
+    font-size: 7vw;
+}
+
+.info-box p {
+    font-family: var(--paragraph-font);
+    text-align: justify;
+    font-size: 3vw;
+}
+
+.button-con {
+    padding-top: 1rem;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
+.button-con a {
+    color: var(--accent1-color);
+    text-decoration: none;
+    background-color: var(--secondary-color);
+    padding: 0.50rem 1rem;
+    margin-right: 5px;
+    font-family: var(--heading-font);
+    font-size: 5vw;
+    border-radius: 10px;
+    
+}
+
+.button-con a:hover {
+    background-color: var(--accent2-color);
     color: var(--text-color);
 }
 
@@ -198,16 +242,42 @@ section p {
 .weather-container {
     display: flex;
     flex-direction: row;
-    background-color: rgb(210, 228, 192);
 }
 
 #weather-info p, #forecast-info p {
     font-size: 15px;
+    padding-bottom: 10px;
 }
 
-#forecast-info {
-    background-color: rgb(210, 228, 192);
+#weather-icon {
+    filter: invert(70%); 
 }
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+footer p {
+    font-size: 15px;
+}
+
+footer div {
+    margin: 10px 0;
+}
+
+.socmed {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.socmed a {
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+/* DIRECTORY */
 
 #business-cards {
     display: grid;
@@ -326,29 +396,6 @@ section p {
     
 }
 
-footer {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-footer p {
-    font-size: 15px;
-}
-
-footer div {
-    margin: 10px 0;
-}
-
-.socmed {
-    padding: 1rem 0;
-    text-align: center;
-}
-
-.socmed a {
-    text-decoration: none;
-    margin: 0 5px;
-}
 
 
 
