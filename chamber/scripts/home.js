@@ -76,8 +76,98 @@ fetch(forecastUrl)
 });
 
 
+// SPOTLIGHT
+const businessUrl = 'data/members.json';
+const cards = document.querySelector('#spotlight');
+
+async function getBusinessData() {
+	try {
+	  const response = await fetch(businessUrl);
+	  if (!response.ok) {
+		throw new Error(`HTTP error! status: ${response.status}`);
+	  }
+  
+	  const data = await response.json();
+	  const filteredBusinesses = data.members.filter(business => business.level === "2" || business.level === "3"); 
+  
+	  const randomBusinesses = [];
+	  while (randomBusinesses.length < 3) {
+		const randomIndex = Math.floor(Math.random() * filteredBusinesses.length);
+		const randomBusiness = filteredBusinesses[randomIndex];
+		if (!randomBusinesses.includes(randomBusiness)) {
+		  randomBusinesses.push(randomBusiness); 
+		}
+	  }
+  
+	  return randomBusinesses;
+	} catch (error) {
+	  console.error("Error fetching business data:", error);
+	}
+  }
+  
+
+getBusinessData().then(displayBusiness);
+
+function displayBusiness(businesses) {
+	document.querySelector("#spotlight").innerHTML = '';
+	businesses.forEach((business) => {
+		let card = document.createElement('section');
+		card.className = 's-cards';
+
+		let businessName = document.createElement('h2');
+		businessName.className = 'sbusiness-name';
+		businessName.innerHTML = `${business.name}`;
+
+		let logoContainer = document.createElement('div');
+		logoContainer.className = 'slogo-container';
+
+		let portrait = document.createElement('img');
+        portrait.className = 'spic';
+		portrait.setAttribute('src', business.image);
+		portrait.setAttribute('alt', '${business.name} logo');
+		portrait.setAttribute('loading', 'lazy');
+		portrait.setAttribute('width', '70');
+		portrait.setAttribute('height', '70');
+
+		let container = document.createElement('div');
+		container.className = 'sp-container';
+
+		let address = document.createElement('p');
+		address.className = 'saddress';
+		address.innerHTML = `${business.address}`;
+
+		let number = document.createElement('p');
+		number.className = 'snumber';
+		number.innerHTML = `${business.number}`;
+
+		let site = document.createElement('p');
+		site.className ='ssite';
+		site.innerHTML = `${business.website}`;
+
+		let level = document.createElement('p');
+		level.className = 'slevel';
+		level.innerHTML = `<span>Level:</span> ${business.level}`;
+
+		let box = document.createElement('div');
+		box.className = 'sinfo-container';
 
 
+		card.appendChild(businessName);
+		card.appendChild(box);
+		box.appendChild(logoContainer);
+		box.appendChild(container);
+		logoContainer.appendChild(portrait);
+		container.appendChild(address);
+		container.appendChild(number);
+		container.appendChild(site);
+		businessName.appendChild(level);
+
+		cards.appendChild(card);
+	});
+}
+
+
+// FOOTER
 const currentYear = new Date().getFullYear();
 
 const lastModifiedDate = document.lastModified;

@@ -12,11 +12,7 @@
         font-size: 20px;
         padding: 0.50rem 2rem;
     }
-
-    .p-container a {
-        font-size: 0.90vw;
-    }
-
+    
     @media (min-width:1000px){
         header {
             display: flex;
@@ -136,5 +132,9 @@
 
     .list .level {
         font-size: 1vw;
+    }
+
+    .sp-container p {
+        font-size: 15px;
     }
 }
