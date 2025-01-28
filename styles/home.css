@@ -67,11 +67,29 @@ dialog {
     left: 50%; 
     transform: translate(-50%, -50%);
     font-family: 'Roboto Condensed', sans-serif; 
+    overflow-x: hidden;
 }
 
 #course-details p, #course-details h2, #course-details h3 {
     padding: 10px;
 }
+
+#course-details p, #course-details h3 {
+    animation-duration: 1.5s;
+    animation-name: slide-in;
+}
+
+@keyframes slide-in {
+    from {
+      translate: 150vw 0;
+      scale: 200% 1;
+    }
+  
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+  }
 
 #course-details h2 {
     background-color: rgb(55, 78, 37);
