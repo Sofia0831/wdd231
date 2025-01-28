@@ -15,7 +15,6 @@ const footerParagraphs = document.querySelector("footer").querySelectorAll("p");
 footerParagraphs[0].textContent = `©️${currentYear} 🎭 Sofia Florylle S. Pantas 🎭 Philippines`;
 footerParagraphs[1].textContent = `Last modified: ${lastModifiedDate}`;
 
-
 const courses = [
     {
         subject: 'CSE',
@@ -125,6 +124,7 @@ wddLink.addEventListener("click", () => {
     createCourseCard(courses.filter(course => course.subject.includes("WDD")));
 });
 
+
 function createCourseCard(filteredCourses) {
     document.querySelector(".certificates").innerHTML = "";
     filteredCourses.forEach(course => {
@@ -134,15 +134,30 @@ function createCourseCard(filteredCourses) {
         card.textContent = `${course.subject} ${course.number}`;
 
         document.querySelector(".certificates").appendChild(card);
-    })
 
+        card.addEventListener('click', () => {
+            displayCourseDetails(course); 
+          });
+
+    });
 }
 
-// function addCredits(filteredCourses){
-//     const totalCredits = filteredCourses.reduce((acc, course) => acc + course.credits, 0);
-//     h2Text.textContent = `The total number of credits is: ${totalCredits} Credits`;
-// }
+const courseDetails = document.querySelector("#course-details");
+function displayCourseDetails(course){
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+        <button id="closeModal">❌</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits</strong>: ${course.credits}</p>
+        <p><strong>Certificate</strong>: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technology</strong>: ${course.technology.join(', ')}</p>
+    `;
+    courseDetails.showModal();
 
-// addCredits(courses);
-
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    });
+}
 
