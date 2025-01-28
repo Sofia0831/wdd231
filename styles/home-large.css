@@ -1,26 +1,5 @@
 @media (min-width: 600px) {
 
-    #menu {
-        display: none;
-    }
-
-    ul.menuLinks, ul.menuLinks.open {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-    }
-
-    ul.menuLinks li a {
-        border: none;
-    }
-
-    .menuLinks li {
-        flex: 1;
-      }
-
-    .navigation {
-        grid-template-rows: 1fr;
-    }
 
     .profile h1 {
         color: aliceblue;
@@ -59,5 +38,29 @@
     .c-nav a {
         padding-left: 60px;
         padding-right: 60px;
+    }
+
+    @media (min-width: 900px){
+        #menu {
+            display: none;
+        }
+    
+        ul.menuLinks, ul.menuLinks.open {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+    
+        ul.menuLinks li a {
+            border: none;
+        }
+    
+        .menuLinks li {
+            flex: 1;
+          }
+
+          .navigation {
+            grid-template-rows: 1fr;
+        }
     }
 }

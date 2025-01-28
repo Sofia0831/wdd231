@@ -65,7 +65,8 @@ dialog {
     position: fixed; 
     top: 50%; 
     left: 50%; 
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto Condensed', sans-serif; 
 }
 
 #course-details p, #course-details h2, #course-details h3 {
@@ -83,14 +84,21 @@ dialog {
 
 dialog button {
     position: absolute;
-    top: 16px;
-    right: 20px;
-    padding: .5rem 1rem;
+    top: 8px;
+    right: 8px;
+    padding: .59rem 1.5rem;
 
 }
 
 #closeModal{
-    font-size: 10px;
+    font-size: 25px;
+    border: none;
+    background-color: rgb(55, 78, 37);
+    color: #fff;
+}
+
+#closeModal:hover {
+    background-color: rgb(109, 136, 91);
 }
 
 #menu::before {
