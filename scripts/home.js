@@ -149,10 +149,10 @@ function displayCourseDetails(course){
         <button id="closeModal">x</button>
         <h2>${course.subject} ${course.number}</h2>
         <h3>${course.title}</h3>
-        <p><strong>Credits</strong>: ${course.credits}</p>
-        <p><strong>Certificate</strong>: ${course.certificate}</p>
-        <p>${course.description}</p>
-        <p><strong>Technology</strong>: ${course.technology.join(', ')}</p>
+        <p class="credit"><strong>Credits</strong>: ${course.credits}</p>
+        <p class="certificate"><strong>Certificate</strong>: ${course.certificate}</p>
+        <p class="classdesc">${course.description}</p>
+        <p class="tech"><strong>Technology</strong>: ${course.technology.join(', ')}</p>
     `;
     courseDetails.showModal();
 

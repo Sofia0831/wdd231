@@ -74,12 +74,30 @@ dialog {
     padding: 10px;
 }
 
-#course-details p, #course-details h3 {
-    animation-duration: 1.5s;
-    animation-name: slide-in;
+
+#course-details h3, #course-details p.certificate, #course-details p.tech {
+    animation-duration: 1s;
+    animation-name: slide-in-left;
 }
 
-@keyframes slide-in {
+@keyframes slide-in-left {
+    from {
+      translate: -150vw 0;
+      scale: 200% 1;
+    }
+  
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+  }
+
+#course-details p.credit, #course-details p.classdesc {
+    animation-duration: 1s;
+    animation-name: slide-in-right;
+}
+
+@keyframes slide-in-right {
     from {
       translate: 150vw 0;
       scale: 200% 1;
