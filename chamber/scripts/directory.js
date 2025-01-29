@@ -80,9 +80,10 @@ function displayBusiness(businesses) {
 		number.className = 'number';
 		number.innerHTML = `${business.number}`;
 
-		let site = document.createElement('p');
+		let site = document.createElement('a');
 		site.className ='site';
-		site.innerHTML = `${business.website}`;
+		site.href = `${business.website}`;
+		site.innerHTML = `${business.name}`;
 
 		let level = document.createElement('p');
 		level.className = 'level';
