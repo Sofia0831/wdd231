@@ -71,9 +71,9 @@ function displayMembershipDetails(membership) {
 	<button id="closeModal">x</button>
         <h2>${membership.level}</h2>
         <h3>${membership.sub}</h3>
-        <p>✓ ${membership.desc1}</p>
-        <p>✓ ${membership.desc2}</p>
-        <p>✓ ${membership.desc3}</p>
+        <p class="desc1">✓ ${membership.desc1}</p>
+        <p class="desc2">✓ ${membership.desc2}</p>
+        <p class="desc1">✓ ${membership.desc3}</p>
 	`;
 	membershipDetails.showModal();
 

@@ -498,6 +498,12 @@ footer div {
     padding: 0.2rem 2rem;
     font-family: var(--paragraph-font);
     font-size: 15px;
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+}
+
+.learn-more:hover {
+    background-color: var(--secondary-color);
 }
 
 .member-level h3 {
@@ -612,8 +618,42 @@ dialog {
     }
 }
 
+#m-details h2, #m-details p.desc1, #course-details p.desc3, #closeModal {
+    animation-duration: 1.5s;
+    animation-name: slide-in-left;
+}
+
+@keyframes slide-in-left {
+    from {
+      translate: -150vw 0;
+      scale: 200% 1;
+    }
+  
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+}
+
+#m-details h3, #m-details p.desc2 {
+    animation-duration: 1.5s;
+    animation-name: slide-in-right;
+}
+
+@keyframes slide-in-right {
+    from {
+      translate: 150vw 0;
+      scale: 200% 1;
+    }
+  
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+}
+
 ::backdrop {
-    background-color: rgb(206, 206, 206 / 0.5);
+    background-color: rgb(159, 159, 159, 0.4);
 }
 
 dialog button {
