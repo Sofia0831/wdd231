@@ -140,9 +140,10 @@ function displayBusiness(businesses) {
 		number.className = 'snumber';
 		number.innerHTML = `${business.number}`;
 
-		let site = document.createElement('p');
+		let site = document.createElement('a');
 		site.className ='ssite';
-		site.innerHTML = `${business.website}`;
+		site.href =`${business.site}`;
+		site.innerHTML = `${business.name}`;
 
 		let level = document.createElement('p');
 		level.className = 'slevel';
