@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+10&family=Roboto+Condensed&display=swap" rel="stylesheet">
 
-    <script defer src="scripts/home.js"></script>
+    <script defer src="scripts/join.js"></script>
 
     <link rel="icon" href="chamber-favicon.ico" type="image/x-icon">
 </head>
@@ -48,11 +48,71 @@
         </div>
     </header>
 
-    
+
     <main>
+        <!-- <div class="home misandvis">
+            <section class="mis">
+                <h2>Mission</h2>
+                <div class="mission">
+                    <p>
+                        To promote economic growth and development in Biliran by fostering a supportive business environment, 
+                        advocating for local entrepreneurs, and enhancing regional competitiveness through collaboration, 
+                        innovation, and community engagement.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+
+                <h2>Vision</h2>
+                <div class="vision">
+                    <p>
+                        To create a vibrant, sustainable, and inclusive business ecosystem that drives economic prosperity, 
+                        empowers local enterprises, and positions Biliran as a leading hub for innovation and investment in the province.
+                    </p>
+                </div>
+            </section>
+        </div> -->
+        <div class="intro-join">
+            <h2>Become a Member Today!</h2>
+            <p>
+                Whether you're a small startup or an established company, the Chamber offers tools and support to help you succeed. 
+                Join us today and be part of a collective effort to shape a thriving business environment in Biliran!
+            </p>
+        </div>
+
+        <section class="membership-details">
+            <div class="form-div">
+                <form action="thankyou.html" method="get">
+                    <h2>Membership Application</h2>
+                    <label>First Name<input type="text" name="firstname" title="Your First Name" autocomplete="given-name" required></label>
+                    <label>Last Name<input type="text" name="lastname" title="Your Last Name" autocomplete="family-name" required></label>
+                    <label>Organization Title<input type="text" name="orgtitle" title="Your Organization Title" autocomplete="organization-title"  pattern="[A-Za-z\s\-]{7,}" required></label>
+                    <label>Email<input type="email" name="email" title="Your Email" autocomplete="email" placeholder="name@gmail.com" required></label>
+                    <label>Cell Phone<input type="tel" name="phone" title="Your Phone Number" autocomplete="tel" placeholder="0912-345-6789" required></label>
+                    <label>Business/Organization's Name<input type="text" name="orgname" title="Your Organization's Name" autocomplete="organization" required></label>
+    
+                    <h3>Membership Level</h3>
+                    <label><input type="radio" name="membership" value="np"> NP Membership</label>
+                    <label><input type="radio" name="membership" value="bronze"> Bronze Membership</label>
+                    <label><input type="radio" name="membership" value="silver"> Silver Membership</label>
+                    <label><input type="radio" name="membership" value="gold"> Gold Membership</label>
+                    
+                    <label class="desc-label">Description <textarea name="description" id="description" rows="6"></textarea></label>
+    
+                    <input type="hidden" name="timestamp" id="datetime" value="<?php echo date('Y-m-d H:i:s'); ?>">
+                    <input type="submit" value="Join Chamber">
+                </form>
+    
+            </div>
+            
+            <dialog id="m-details"></dialog>
+            <div class="membership-info">
+                
+            </div>
+        </section>
 
     </main>
-
 
 
     <footer>

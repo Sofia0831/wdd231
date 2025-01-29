@@ -126,4 +126,29 @@
     .sp-container p, .ssite {
         font-size: 15px;
     }
+
+    .member-level h3 {
+        font-size: 30px;
+    }
+
+    .member-level {
+        margin: 30px;
+    }
+
+    .membership-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .form-div {
+        border-radius: 10px;
+    }
+
+ 
+    label {
+        font-size: 15px;
+    }
+
 }
