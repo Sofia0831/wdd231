@@ -492,7 +492,51 @@ footer div {
     background-color: var(--accent1-color);
     border-radius: 10px;
     box-shadow: 3px 3px 8px 3px var(--secondary-color);
+    animation-timing-function: ease-in-out;
 }
+
+.member-level:nth-child(1) {
+    animation-duration: 1.3s, 6s;
+    animation-name: slide-up, backgroundColorChange;
+    animation-iteration-count: 1, infinite;
+}
+
+.member-level:nth-child(2) {
+    animation-duration: 1.6s, 6.3s;
+    animation-name: slide-up, backgroundColorChange;
+    animation-iteration-count: 1, infinite;
+}
+
+.member-level:nth-child(3) {
+    animation-duration: 1.9s, 6.6s;
+    animation-name: slide-up, backgroundColorChange;
+    animation-iteration-count: 1, infinite;
+
+}
+
+.member-level:nth-child(4) {
+    animation-duration: 2.1s, 6.9s;
+    animation-name: slide-up, backgroundColorChange;
+    animation-iteration-count: 1, infinite;
+}
+
+@keyframes slide-up{
+    from {
+        transform: translateY(150vh);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0); 
+        opacity: 1;
+    }
+}
+
+@keyframes backgroundColorChange {
+    0% { background-color: rgb(255, 255, 255); }
+    100% { background-color: rgb(216, 234, 177); }
+}
+
 
 .learn-more {
     padding: 0.2rem 2rem;
@@ -625,13 +669,11 @@ dialog {
 
 @keyframes slide-in-left {
     from {
-      translate: -150vw 0;
-      scale: 200% 1;
+        transform: translate(-150vw, 0);
     }
-  
+
     to {
-      translate: 0 0;
-      scale: 100% 1;
+        transform: translate(0, 0); 
     }
 }
 
@@ -639,16 +681,13 @@ dialog {
     animation-duration: 1.5s;
     animation-name: slide-in-right;
 }
-
 @keyframes slide-in-right {
     from {
-      translate: 150vw 0;
-      scale: 200% 1;
+        transform: translate(150vw, 0);
     }
-  
+
     to {
-      translate: 0 0;
-      scale: 100% 1;
+        transform: translate(0, 0);
     }
 }
 
