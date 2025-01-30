@@ -83,24 +83,24 @@
 
         <section class="membership-details">
             <div class="form-div">
-                <form action="thankyou.html" method="get">
+                <form id="myForm" action="thankyou.html" method="get">
                     <h2>Membership Application</h2>
                     <label>First Name<input type="text" name="firstname" title="Your First Name" autocomplete="given-name" required></label>
                     <label>Last Name<input type="text" name="lastname" title="Your Last Name" autocomplete="family-name" required></label>
-                    <label>Organization Title<input type="text" name="orgtitle" title="Your Organization Title" autocomplete="organization-title"  pattern="[A-Za-z\s\-]{7,}" required></label>
+                    <label>Organization Title<input type="text" name="orgtitle" title="Please enter at least 7 characters, using only letters, spaces, and hyphens" autocomplete="organization-title"  pattern="[A-Za-z\s\-]{7,}" required></label>
                     <label>Email<input type="email" name="email" title="Your Email" autocomplete="email" placeholder="name@gmail.com" required></label>
-                    <label>Cell Phone<input type="tel" name="phone" title="Your Phone Number" autocomplete="tel" placeholder="0912-345-6789" required></label>
+                    <label>Cell Phone<input type="tel" name="phone" title="Your Phone Number" autocomplete="tel" placeholder="0912-345-6789" inputmode="numeric" pattern="^[0-9-]+$" required></label>
                     <label>Business/Organization's Name<input type="text" name="orgname" title="Your Organization's Name" autocomplete="organization" required></label>
     
                     <h3>Membership Level</h3>
-                    <label><input type="radio" name="membership" value="np"> NP Membership</label>
+                    <label><input type="radio" name="membership" value="np" required> NP Membership</label>
                     <label><input type="radio" name="membership" value="bronze"> Bronze Membership</label>
                     <label><input type="radio" name="membership" value="silver"> Silver Membership</label>
                     <label><input type="radio" name="membership" value="gold"> Gold Membership</label>
                     
                     <label class="desc-label">Description <textarea name="description" id="description" rows="6"></textarea></label>
     
-                    <input type="hidden" name="timestamp" id="datetime" value="<?php echo date('Y-m-d H:i:s'); ?>">
+                    <input type="hidden" name="timestamp" id="timestamp">
                     <input type="submit" value="Join Chamber">
                 </form>
     

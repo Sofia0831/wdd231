@@ -7,7 +7,7 @@ let formData = everything[1].split('&')
 function show(cup) {
     formData.forEach((element) => {
         if (element.startsWith(cup)) {
-            result=element.split('=')[1].replace("%40", "@")
+            result=element.split('=')[1].replace("%40", "@").replace("+", " ")
         }
     })
     return(result)
