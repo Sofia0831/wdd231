@@ -756,10 +756,6 @@ dialog button {
     font-size: 35px;
 }
 
-.app { 
-    font-family: var(--paragraph-font);
-}
-
 #thanks h2, .app {
     margin: 10px 0;
 }
@@ -774,15 +770,8 @@ dialog button {
     font-family: var(--heading-font);
 }
 
-.sub-details p {
+.sub-details p, .app {
     font-family: var(--paragraph-font);
-}
-
-.discover {
-    text-decoration: none;
-}
-
-.discover:hover {
-    text-decoration: underline;
+    font-size: 4.5vw;
 }
 

@@ -151,4 +151,8 @@
         font-size: 15px;
     }
 
+    .sub-details p, .app {
+        font-size: 17px;
+    }
+
 }
