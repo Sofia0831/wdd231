@@ -65,7 +65,7 @@ if (timestampData) {
 }
 
 showInfo.innerHTML = `
-<h2>Thank You</h2>
+<h2>Thank You!</h2>
 <p class="app">We appreciate your interest in joining our organization. Your application has been successfully submitted.</p>
 <div class="sub-details"><h3>Submission Details</h3>
 <p><strong>First Name: </strong>${show("firstname").replace("+", " ")}</p>
@@ -73,7 +73,9 @@ showInfo.innerHTML = `
 <p><strong>Email: </strong>${show("email")}</p>
 <p><strong>Number: </strong>${show("phone")}</p>
 <p><strong>Business: </strong>${show("orgname").replace("+", " ")}</p>
-<p><strong>Submission Date: </strong>${show("timestamp").date} at ${formattedTime}</p></div>
+<p><strong>Submission Date: </strong>${show("timestamp").date} at ${formattedTime}</p><br>
+<p>If you're curious or want to explore further, feel free to <a href="#" class="discover">discover more.</a></p>
+
 `;
 
 // FOOTER

@@ -748,6 +748,7 @@ dialog button {
     border: 2px solid var(--primary-color);
     box-shadow: 3px 4px 8px 4px var(--secondary-color);
     margin-bottom: 30px;
+    position: relative;
 }
 
 #thanks h2 {
@@ -775,5 +776,9 @@ dialog button {
 
 .sub-details p {
     font-family: var(--paragraph-font);
+}
+
+.discover {
+    text-decoration: none
 }
 
