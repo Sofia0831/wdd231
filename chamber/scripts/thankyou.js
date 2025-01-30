@@ -74,7 +74,7 @@ showInfo.innerHTML = `
 <p><strong>Number: </strong>${show("phone")}</p>
 <p><strong>Business: </strong>${show("orgname").replace("+", " ")}</p>
 <p><strong>Submission Date: </strong>${show("timestamp").date} at ${formattedTime}</p><br>
-<p>If you're curious or want to explore further, feel free to <a href="#" class="discover">discover more.</a></p>
+<p>If you're curious or want to explore further, feel free to <a href="#" class="discover">discover more</a>.</p>
 
 `;
 

@@ -779,6 +779,10 @@ dialog button {
 }
 
 .discover {
-    text-decoration: none
+    text-decoration: none;
+}
+
+.discover:hover {
+    text-decoration: underline;
 }
 
