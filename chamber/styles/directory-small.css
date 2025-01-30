@@ -462,6 +462,7 @@ footer div {
     border: 2px solid var(--secondary-color);
 }
 
+
 /* JOIN PAGE */
 .intro-join {
     padding: 1rem;
@@ -729,5 +730,50 @@ dialog button {
 
 #closeModal:hover {
     background-color: rgb(109, 136, 91);
+}
+
+/* THANK YOU */
+.application {
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 40px;
+}
+
+#thanks {
+    background-color: var(--accent1-color);
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 2px solid var(--primary-color);
+    box-shadow: 3px 4px 8px 4px var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+#thanks h2 {
+    font-family: var(--heading-font);
+    font-size: 35px;
+}
+
+.app { 
+    font-family: var(--paragraph-font);
+}
+
+#thanks h2, .app {
+    margin: 10px 0;
+}
+
+.sub-details {
+    margin: 10px 0;
+}
+
+.sub-details h3 {
+    margin: 30px 0 10px 0;
+    font-size: 25px;
+    font-family: var(--heading-font);
+}
+
+.sub-details p {
+    font-family: var(--paragraph-font);
 }
 

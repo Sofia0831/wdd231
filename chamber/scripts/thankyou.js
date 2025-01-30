@@ -66,14 +66,14 @@ if (timestampData) {
 
 showInfo.innerHTML = `
 <h2>Thank You</h2>
-<p>We appreciate your interest in joining our organization. Your application has been successfully submitted.</p>
-<h3>Submission Details</h3>
+<p class="app">We appreciate your interest in joining our organization. Your application has been successfully submitted.</p>
+<div class="sub-details"><h3>Submission Details</h3>
 <p><strong>First Name: </strong>${show("firstname").replace("+", " ")}</p>
 <p><strong>Last Name: </strong>${show("lastname")}</p>
 <p><strong>Email: </strong>${show("email")}</p>
 <p><strong>Number: </strong>${show("phone")}</p>
 <p><strong>Business: </strong>${show("orgname").replace("+", " ")}</p>
-<p><strong>Submission Date: </strong>${show("timestamp").date} at ${formattedTime}</p>
+<p><strong>Submission Date: </strong>${show("timestamp").date} at ${formattedTime}</p></div>
 `;
 
 // FOOTER
