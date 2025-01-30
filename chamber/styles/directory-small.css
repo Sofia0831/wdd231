@@ -772,6 +772,6 @@ dialog button {
 
 .sub-details p, .app {
     font-family: var(--paragraph-font);
-    font-size: 4.5vw;
+    font-size: 17px;
 }
 
