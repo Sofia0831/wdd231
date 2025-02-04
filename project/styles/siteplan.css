@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+html{
+    background-color: var(--accent2-color);
+}
+
+header{
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+}
+
+header h1 {
+    font-size: 60px;
+    font-family: var(--heading-font);
+    color: var(--accent1-color);
+}
+
+body {
+    font-family: var(--paragraph-font);
+    max-width: 960px;
+    padding: 2rem;
+    padding-top: 5px;
+    margin: 0 auto;
+    background-color:var(--accent1-color) ;
+
+}
+
+main {
+    padding: 3rem;
+}
+
+:root {
+    --primary-color: #14213D;
+    --secondary-color: #000000;
+    --accent1-color: #FFFFFF;
+    --accent2-color: #E5E5E5;
+
+    --heading-font: 'Bebas Neue', sans-serif;
+    --paragraph-font: 'Arial', sans-serif;
+
+    --nav-background-color: #14213D;
+    --nav-link-color: #FFFFFF;
+    --nav-hover-link-color:#ffffff;
+    --nav-hover-background-color:#000000;
+    
+}
+
+.colors {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.colors th, .colors td {
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #ddd;
+}
+
+.colors th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.colors .primary {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.colors .secondary {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.colors .tertiary {
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color);
+}
+
+.colors .accent1 {
+    background-color: var(--accent1-color);
+}
+
+.colors .accent2 {
+    background-color: var(--accent2-color);
+}
+
+main h2 {
+    font-size: 40px;
+}
+
+main h3 {
+    font-size: xx-large;
+}
+
+main h4 {
+    font-size: x-large;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+
+}
+
+
+p {
+    padding: 2px 2rem 2px 2rem;
+    text-align: justify;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+
+.center-heading {
+    text-align: center;
+}
+
+.center-footer {
+    text-align: center;
+}
+
+.colored-callout {
+    background-color: var(--accent2-color);
+    padding: 1.5rem;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+}
+
+footer p {
+    text-align: center;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 1.5rem;
+    padding-bottom: 0;
+}
+
+#lastModified {
+    font-size : 13px;
+    padding: 1rem;
+    padding-top: 0rem;
+    color: var(--accent1-color);
+    
+}
