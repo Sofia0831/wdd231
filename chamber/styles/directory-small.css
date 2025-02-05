@@ -775,3 +775,93 @@ dialog button {
     font-size: 17px;
 }
 
+
+/* DISCOVER */
+* {
+    box-sizing: border-box;
+}
+
+#allplaces div {
+    margin: 1rem 8px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    background-color: var(--accent1-color);
+    overflow: hidden;
+    box-shadow: 6px 3px 9px 3px #333;
+
+    display: grid;
+    grid-template-areas: 
+    "placename"
+    "photo"
+    "placedesc"
+    "location"
+    "button"
+    ;
+}
+
+#allplaces div h2 {
+    margin: 1rem 10px;
+    font-family: var(--heading-font);
+    font-size: 30px;
+    grid-area: placename;
+}
+
+#allplaces div p {
+    margin: 10px;
+    padding: 0;
+    font-family: var(--paragraph-font);
+    grid-area: placedesc;
+}
+
+#allplaces div address {
+    margin: 0.25rem 1rem;
+    grid-area: location;
+}
+
+#allplaces div figure {
+    grid-area: photo;
+}
+
+#allplaces div figure img {
+    width: 100%;
+}
+
+#allplaces div figure img:hover {
+    border-radius: 15px 150px;
+}
+
+#allplaces div button {
+    padding: .50rem;
+    margin: 1rem 10px;
+    font-family: var(--paragraph-font);
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+    border-radius: 30px;
+    grid-area: button;
+}
+
+#allplaces div button:hover {
+    background-color: var(--secondary-color);
+}
+
+.discover section {
+    background-color: var(--accent2-color);
+}
+
+
+
+.discover h1 {
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+    padding: 0.5rem 1rem;
+    font-family: var(--heading-font);
+}
+
+.discover p {
+    padding: 1rem;
+    margin-top: 0;
+    padding-top: 0;
+    font-family: var(--paragraph-font);
+}
+
+
