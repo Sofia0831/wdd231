@@ -45,6 +45,7 @@ function displayItems(places) {
 		const pic = document.createElement('img');
 		pic.src = `${x.photoUrl}`;
 		pic.alt = x.name;
+		pic.loading = "loading";
 		fig.appendChild(pic);
 		card.appendChild(fig);
 
