@@ -885,7 +885,7 @@ dialog button {
     color: var(--accent1-color);
 }
 
-.dis {
+h1 {
     font-family: var(--heading-font);
     font-size: 40px;
     padding: 0;
