@@ -1,5 +1,5 @@
 import { places } from "../data/places.mjs";
-console.log(places)
+// console.log(places)
 
 
 // NAV BUTTON
@@ -10,6 +10,29 @@ hamButton.addEventListener('click', () => {
 	navigation.classList.toggle('open');
 	hamButton.classList.toggle('open');
 });
+
+// welcome
+const visitorInfo = document.querySelector("#here");
+const lastVisit = localStorage.getItem("lastVisit");
+const currentDate = new Date();
+
+if (lastVisit === null) {
+	visitorInfo.textContent = "Welcome! Let us know if you have any questions.";
+} else {
+	const lastVisitDate = new Date(lastVisit);
+	const timeDiff = currentDate.getTime() - lastVisitDate.getTime();
+	const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+	if (daysDiff < 1) {
+		visitorInfo.textContent = "Back so soon! Awesome!";
+	} else if (daysDiff === 1) {
+		visitorInfo.textContent = "You last visited 1 day ago.";
+	} else {
+		visitorInfo.textContent = `You last visited ${daysDiff} days ago.`;
+	}
+}
+
+localStorage.setItem("lastVisit", currentDate.toString());
 
 // PLACES
 const placeDiv = document.querySelector("#allplaces")
