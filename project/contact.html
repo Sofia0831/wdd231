@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamalayi Studio - Contact Page</title>
+    <meta name="description" content="Contact page for Kamalayi Studio site">
+    <meta name="author" content="Sofia Florylle S. Pantas">
+
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/kamalayistudio-larger.css">
+
+    <script defer src="scripts/contact.js"></script>
+</head>
+<body>
+    <header>
+
+        <h1>KAMALAYI STUDIOS</h1>
+        <button aria-label="Menu Button" type="button" id="menu"></button>
+        <div class="navi">
+            <nav class="navigation">
+                <a href="kamalayistudio.html" id="home" title="Home">Home</a>
+                <a href="projects.html" id="project" title="Projects">Projects</a>
+                <a href="profiles.html" id="profiles" title="Profiles">Profiles</a>
+                <a href="#" id="contact" title="Contact" class="active">Contact</a>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+        <h2>Send Us a Message</h2>
+        <div class="form-container">
+            <form id="myForm" method="get" action="message.html">
+                <fieldset>
+                    <label for="name">Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="name@domain.com" required>
+
+                    <label>Your Message</label>
+                    <textarea id="review" name="review" placeholder="Type in your message"></textarea>
+
+                    <input type="submit" value="Send my message">
+                </fieldset>
+
+            </form>
+            <aside>
+                <h3>General Questions</h3>
+                <p>
+                    If you need to contact us for any reason, feel free to either fill out this form or contact us on Twitter.
+                    We’ll try to respond within 2 working days, but usually sooner.
+                </p>
+            </aside>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>
+            Copyright &copy;<span id="currentyear"></span> KAMALAYI STUDIOS
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+    
+</body>
+</html>

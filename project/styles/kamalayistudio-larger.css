@@ -1,0 +1,108 @@
+
+@media (min-width: 700px) {
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+  
+    #menu {
+    	display: none;
+    }
+
+	.navigation {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        background-color: #252a34;
+        
+	}
+	.navigation a {
+        display: block;
+		flex: 1 1 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+        border: 1px solid #E5E5E5;
+	}
+
+    .navi {
+        padding-top: 0;
+    }
+
+	main {
+        max-width: 1400px;
+        justify-content: center;    
+    }
+
+    .active {
+        background-color: #000;
+    }
+
+
+    /* --------------------------project css----------------------------- */
+    .projectsdiv {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        padding: 50px;
+		place-items: center; 
+	}
+
+    .g-navigation {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    /* -------------------------- profiles css ---------------------------- */
+    .profile-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        padding: 50px;
+		place-items: center; 
+	}
+
+    .profile-button {
+        padding: 1rem 3rem;
+        right: 80px;
+        bottom: 20px;
+    }
+
+    .profile-info p {
+        text-align: justify;
+        padding: 2rem 5rem;
+    }
+
+    /* ------------------------------------ Contact CSS -------------------------------------- */
+    .form-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        padding: 0 50px;
+    }
+
+     fieldset 
+    {
+        padding: 1.5rem 5rem 3rem 5rem;
+    }
+
+    .message, aside {
+        padding: 10rem 3rem;   
+        text-align: justify; 
+    }
+   
+    aside h3 {
+        padding-bottom: 1rem;
+    }
+
+    aside p {
+        text-align: justify;
+    }
+
+    .message h3 {
+        text-align: center;
+    }
+
+}

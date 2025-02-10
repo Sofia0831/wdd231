@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #252a34;
+    --secondary-color: #000;
+    --background-color: #151D28;
+    --accent1-color: #FFFFFF;
+    --accent2-color: #dfdfdf;
+
+    --heading-font: 'Bebas Neue', sans-serif;
+    --paragraph-font: 'Arial', sans-serif;
+    
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    color: var(--accent1-color);
+    font-family: var(--heading-font);
+
+}
+
+body {
+    background-color: var(--secondary-color);
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--accent2-color);
+
+}
+
+h1 {
+    font-size: 50px;
+    padding-left: 1.5rem;
+    font-family: var(--heading-font);
+}
+
+h2 {
+    text-align: center;
+    padding: 1rem;
+    font-family: var(--heading-font);
+    font-size: 40px;
+}
+
+h3 {
+    font-family: var(--paragraph-font);
+}
+
+#menu::before {
+	content: "☰";
+    color: #fff;
+}
+
+#menu.open::before {
+	content: "X";
+    color: #fff;
+}
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+    background-color: var(--primary-color);
+}
+
+.navigation a {
+	display: none;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+    font-size: 30px;
+    border: 1px solid #E5E5E5;
+}
+
+.navigation a:hover {
+    color: var(--secondary-color);
+    background-color: var(--accent2-color);
+}
+
+#menu {
+	font-size: 2rem;
+	border: 0;
+	background: none;
+	position: absolute;
+	top: 1.49rem;
+	right: 1rem;
+}
+
+.open a {
+	display: block;
+}
+
+.navi {
+    padding-top: 1rem;
+}
+
+footer {
+    width: 100%;
+}
+
+footer p {
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 23px;
+}
+
+#lastModified {
+    font-size: 19px;
+    padding-top: 0;
+}
+
+.active {
+    background-color: var(--secondary-color);
+}
+
+/* ------------------ profiles css ------------------ */
+
+.profileh1 {
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.profiles-card{
+    max-width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 1rem;
+}
+
+.profiles-card img {
+    margin-top: 1.5rem;
+}
+
+.profiles-card h3 {
+    font-size: 33px;
+    font-family: var(--heading-font);
+    padding: 1rem;
+    color: var(--accent2-color);
+    border-radius: 40px;
+}
+
+h4 {
+    text-align: center;
+    font-family: var(--paragraph-font);
+    padding-top: 1rem;
+    padding-bottom: 0;
+    font-size: 25px;
+}
+
+.profiles-card a:hover img {
+    transform: scale(1.2);
+}
+
+.miko {
+    background-color: rgb(107, 42, 42);
+}
+
+.puddin {
+    background-color: rgb(54, 81, 54);
+}
+
+.yui {
+    background-color: rgb(53, 71, 97);
+}
+
+.profile-info {
+    position: relative;
+    padding: 2rem;
+}
+
+
+
+.profile-art-card {
+    max-width: 100%;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    text-align: center;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.3)
+}
+
+.profile-art-card h3 {
+    background-color: var(--background-color);
+    padding: 1rem;
+    color: var(--accent2-color);
+}
+
+.profile-info p {
+    font-size: 20px;
+    font-family: var(--paragraph-font);
+    text-align: left;
+    padding: 2rem 3rem 2rem 3rem;
+    
+}
+
+.profile-button {
+    position: absolute;
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    font-size: 15px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    bottom: 5px;
+    right: 10px;
+}

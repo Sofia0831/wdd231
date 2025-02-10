@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamalayi Studio</title>
+    <meta name="description" content="Creative hub for a trio of artists to showcase their art | WDD 131 | Project">
+    <meta name="author" content="Sofia Florylle S. Pantas">
+
+    <link rel="stylesheet" href="styles/kamalayistudio.css">
+    <link rel="stylesheet" href="styles/kamalayistudio-larger.css">
+
+    <script defer src="scripts/kamalayistudio.js"></script>
+
+</head>
+<body>
+    <header>
+
+        <h1>KAMALAYI STUDIOS</h1>
+        <button aria-label="Menu Button" type="button" id="menu"></button>
+        <div class="navi">
+            <nav class="navigation">
+                <a href="#" id="home" title="Home" class="active">Home</a>
+                <a href="projects.html" id="project" title="Projects">Projects</a>
+                <a href="profiles.html" id="profiles" title="Profiles">Profiles</a>
+                <a href="contact.html" id="contact" title="Contact">Contact</a>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="banner">
+            <picture>
+                <source srcset="images/banner2.webp" media="(min-width: 1000px)">
+                <img class="logo" src="images/logo.png" alt="kamalayi studio logo" width="320" height="320">
+            </picture>
+        </div>
+
+        <div class="line">
+            <h2>
+                "A trio with way too much in common making art"
+            </h2>
+        </div>
+
+        <div class="socials">
+            <a href="mailto:kamalayistudio@gmail.com" target="_blank">
+                <img loading="lazy" src="images/email.svg" alt="kamalayi studio email address" width="60" height="60">
+            </a>
+            <a href="https://x.com/KamalayiStudio" target="_blank">
+                <img loading="lazy" src="images/twitter.svg" alt="kamalayi studio x account" width="54" height="54">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61555775979921" target="_blank">
+                <img loading="lazy" src="images/facebook.svg" alt="kamalayi studio facebook page" width="60" height="60">
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            Copyright &copy;<span id="currentyear"></span> KAMALAYI STUDIOS
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
