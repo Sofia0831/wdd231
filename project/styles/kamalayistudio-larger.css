@@ -1,44 +1,34 @@
 
 @media (min-width: 700px) {
-	header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-
-  
-    #menu {
-    	display: none;
-    }
-
-	.navigation {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        background-color: #252a34;
-        
-	}
-	.navigation a {
-        display: block;
-		flex: 1 1 100%;
-        padding-left: 40px;
-        padding-right: 40px;
-        border: 1px solid #E5E5E5;
-	}
-
-    .navi {
-        padding-top: 0;
-    }
-
 	main {
         max-width: 1400px;
         justify-content: center;    
     }
-
-    .active {
-        background-color: #000;
+    
+    header h1 {
+        font-size: 50px;
     }
 
+    #menu::before {
+        font-size: 70px;
+    }
+
+    #menu {
+        top: 1.3rem;
+    }
+
+    .navigation {
+        padding: 0.5rem 0;
+    }
+
+    .home {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    #weather-info p {
+        font-size: 20px;
+    }
 
     /* --------------------------project css----------------------------- */
     .projectsdiv {
@@ -75,6 +65,18 @@
         padding: 2rem 5rem;
     }
 
+    .profiles-card h4 {
+        font-size: 17px;
+    }
+
+    #profileModal h1 {
+        font-size: 50px;
+    }
+
+    dialog button {
+        padding: 1.5rem;
+    }
+
     /* ------------------------------------ Contact CSS -------------------------------------- */
     .form-container {
         display: grid;
@@ -105,4 +107,38 @@
         text-align: center;
     }
 
+}
+
+@media (min-width:1000px){
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    ul.menuLinks, ul.menuLinks.open {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    ul.menuLinks li a {
+        display: block;
+        flex: 1 1 100%;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .menuLinks li {
+        flex: 1;
+    }
 }

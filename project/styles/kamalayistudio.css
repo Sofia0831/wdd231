@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -20,10 +18,9 @@
 
 header, footer {
     background-color: var(--primary-color);
-    padding: 1rem;
+    padding: 1rem 2rem;
     color: var(--accent1-color);
     font-family: var(--heading-font);
-
 }
 
 body {
@@ -42,10 +39,11 @@ main {
     height: auto;
 }
 
-h1 {
-    font-size: 50px;
-    padding-left: 1.5rem;
+header h1 {
+    font-size: 37px;
     font-family: var(--heading-font);
+    padding: 1rem 0;
+    margin: 0;
 }
 
 h2 {
@@ -59,6 +57,125 @@ h3 {
     font-family: var(--paragraph-font);
 }
 
+.navigation {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+.navigation ul {
+    overflow: hidden;
+}
+
+.navigation.open {
+    grid-template-rows: 1fr;
+}
+
+ul.menuLinks li a {
+    background-color: var(--primary-color);
+    border: 1px solid #7e7c7c;
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    font-family: var(--heading-font);
+    font-size: 30px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+}
+
+ul.menuLinks li a.active {
+    color: var(--background-color);
+    background-color: var(--accent2-color);
+}
+
+
+ul.menuLinks li a:hover {
+    color: var(--secondary-color);
+    background-color: var(--accent1-color);
+}
+
+ul.menuLinks {
+    list-style-type: none;
+}
+
+#menu::before {
+	content: "☰";
+    font-size: 35px;
+    color: var(--accent1-color);
+}
+
+#menu.open::before {
+	content: "X";
+    color: var(--accent1-color);
+}
+
+#menu {
+	font-size: 2rem;
+	border: 0;
+	background: none;
+	position: absolute;
+	top: 2rem;
+	right: 1rem;
+}
+
+.home {
+    padding: 1rem ;
+}
+
+.home section {
+    background-color: var(--accent1-color);
+    margin: 20px;
+}
+
+.home h2 {
+    background-color: var(--background-color);
+    color: var(--accent1-color);
+    font-size: 30px;
+}
+
+.home p {
+    padding: 1rem;
+    font-family: var(--paragraph-font);
+    font-size: 17px;
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+
+#weather-info p {
+    font-size: 17px;
+    padding-bottom: 10px;
+}
+
+#weather-icon {
+    filter: invert(70%); 
+}
+
+.posts-info {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.posts-info button {
+    padding: .5rem;
+    margin: 5px;
+    background-color: var(--background-color);
+    color: var(--accent1-color);
+    border-radius: 10px;
+
+}
+
+.posts-info button:hover {
+    background-color: var(--accent2-color);
+    color: var(--secondary-color);
+}
+
 .socials {
     text-align: center;
     padding: 0.6rem 1rem 1.5rem 1rem;
@@ -70,66 +187,23 @@ h3 {
     padding: 0.2rem;
 }
 
+.social-icon:nth-child(1){animation: fadeIn 2s;}
+.social-icon:nth-child(2) {animation: fadeIn 4s;}
+.social-icon:nth-child(3) {animation: fadeIn 6s;}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .socials a:hover img {
     transform: scale(1.2);
 }
 
-.socials {
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out; 
-}
-  
-.socials.visible {
-    opacity: 1;
-}
-
-#menu::before {
-	content: "☰";
-    color: #fff;
-}
-
-#menu.open::before {
-	content: "X";
-    color: #fff;
-}
-
-.navigation {
-	display: flex;
-	flex-direction: column;
-    background-color: var(--primary-color);
-}
-
-.navigation a {
-	display: none;
-	padding: 1rem;
-	text-align: center;
-	text-decoration: none;
-	color: #fff;
-    font-size: 30px;
-    border: 1px solid #E5E5E5;
-}
-
-.navigation a:hover {
-    color: var(--secondary-color);
-    background-color: var(--accent2-color);
-}
-
-#menu {
-	font-size: 2rem;
-	border: 0;
-	background: none;
-	position: absolute;
-	top: 1.49rem;
-	right: 1rem;
-}
-
-.open a {
-	display: block;
-}
-
-.navi {
-    padding-top: 1rem;
-}
 
 footer {
     width: 100%;
@@ -146,7 +220,294 @@ footer p {
     padding-top: 0;
 }
 
+/* PROJECTS */
 .active {
     background-color: var(--secondary-color);
+}
+
+.g-navigation {
+	display: flex;
+	flex-direction: column;
+}
+
+.g-navigation a {
+    font-family: var(--heading-font);
+    background-color: var(--accent1-color);
+    padding: 1rem;
+	width: 100%;
+    margin: 0;
+	text-align: center;
+	text-decoration: none;
+	color: var(--secondary-color);
+    font-size: 30px;
+    border: 1px solid rgb(185, 184, 184);
+}
+
+.g-navigation a:hover {
+    color: var(--accent1-color);
+    background-color: var(--secondary-color);
+}
+
+
+.project-heading {
+    padding-top: 3rem;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.projectsdiv {
+    padding: 2rem;
+}
+
+.art-card{
+    max-width: 100%;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    text-align: center;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.3)
+}
+
+.art-card h3 {
+    background-color: var(--background-color);
+    padding: 1rem;
+    color: var(--accent2-color);
+}
+
+.art-card .info {
+    padding: .5rem;
+    font-family: var(--paragraph-font);
+}
+
+
+/* ------------------ profiles css ------------------ */
+
+.profileh1 {
+    text-align: center;
+    padding-top: 3rem;
+    margin: 0;
+    font-family: var(--heading-font);
+    font-size: 40px;
+}
+
+.profiles-card{
+    max-width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 1rem;
+}
+
+.profiles-card img {
+    margin-top: 1.5rem;
+}
+
+.profiles-card h3 {
+    font-size: 33px;
+    font-family: var(--heading-font);
+    padding: 1rem;
+    color: var(--accent2-color);
+    border-radius: 40px;
+}
+
+h4 {
+    text-align: center;
+    font-family: var(--paragraph-font);
+    padding-top: 1rem;
+    padding-bottom: 0;
+    font-size: 25px;
+}
+
+.profiles-card a:hover img {
+    transform: scale(1.2);
+}
+
+.miko {
+    background-color: rgb(107, 42, 42);
+}
+
+.puddin {
+    background-color: rgb(54, 81, 54);
+}
+
+.yui {
+    background-color: rgb(53, 71, 97);
+}
+
+.profile-info {
+    position: relative;
+    padding: 2rem;
+}
+
+
+
+.profile-art-card {
+    max-width: 100%;
+    margin-bottom: 20px;
+    margin-top: 0;
+    text-align: center;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.3)
+}
+
+.profile-art-card h3 {
+    background-color: var(--background-color);
+    padding: 1rem;
+    color: var(--accent2-color);
+}
+
+.profile-info p {
+    font-size: 20px;
+    font-family: var(--paragraph-font);
+    text-align: left;
+    padding: 2rem 3rem 2rem 3rem;
+    
+}
+
+.profile-button {
+    position: absolute;
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    font-size: 15px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    bottom: 5px;
+    right: 10px;
+}
+
+dialog {
+    border: 1px solid black;
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: #fff;
+    width: 90%;
+    max-width: 900px;
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto Condensed', sans-serif; 
+    overflow-x: hidden;
+    opacity: 0; 
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+dialog button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: .87rem 1.5rem;
+
+}
+
+#profileModal h1 {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px;
+    margin-top: 0;
+    font-family: var(--heading-font);
+
+}
+
+#profileModal h2 {
+    padding: 1rem;
+    font-size: 30px;
+}
+
+#profileModal p {
+    padding: 1rem;
+    font-family: var(--paragraph-font);
+    font-size: 17px;
+}
+
+#closeModal{
+    font-size: 25px;
+    border: 1px solid gray;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+#closeModal:hover {
+    background-color: #525c71;
+}
+
+
+/* ---------------------------------- Contact CSS -------------------------------------- */
+
+.form-container {
+    padding: 1rem;
+}
+
+p {
+    text-align: center;
+}
+
+fieldset 
+{
+    margin: 1rem 0;
+    border: 1px solid var(--secondary-color);
+    border-radius: 6px;
+    padding: 1rem;
+    background-color: var(--accent1-color);
+}
+
+label 
+{
+    display: block;
+    padding-top: 1rem;
+    color: var(--background-color);
+}
+
+textarea 
+{
+    width: 100%;
+    height: 100px;
+    padding: .5rem;
+}
+
+input[type="text"], input[type="email"]
+{
+    display: block;
+    width: 100%;
+    padding: .75rem;
+    
+}
+
+input[type="submit"] 
+{
+    display: block;
+    margin-top: 2rem;
+    border-radius: 6px;
+    padding: 1rem;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+}
+
+aside h3 {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+aside p {
+    text-align: center;
+    padding: 1rem;
+    padding-top: 0;
+}
+
+.required {
+    color: rgb(177, 27, 27);
+}
+
+.message {
+    text-align: center;
+    padding: 5rem;
+    background-color: var(--accent1-color);
+    margin: 15px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.message h3 {
+    font-family: var(--heading-font);
+    font-size: 30px;
+    padding-bottom: 1rem;
 }
 

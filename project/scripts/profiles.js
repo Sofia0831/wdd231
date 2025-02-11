@@ -1,21 +1,3 @@
-const hamButton = document.querySelector('#menu');
-const navigation = document.querySelector('.navigation');
-
-hamButton.addEventListener('click', () => {
-	navigation.classList.toggle('open');
-	hamButton.classList.toggle('open');
-});
-
-const currentYear = new Date().getFullYear();
-
-const lastModifiedDate = document.lastModified;
-
-
-const footerParagraphs = document.querySelector("footer").querySelectorAll("p");
-footerParagraphs[0].textContent = `Copyright ©️ ${currentYear} KAMALAYI STUDIOS. Philippines`;
-footerParagraphs[1].textContent = `Last modified: ${lastModifiedDate}`;
-
-
 const profiles = [
 	{
 		profileName: "MikoCappuccino",
@@ -52,8 +34,8 @@ function createProfileCard(){
 		img.setAttribute("src", profile.imageUrl);
 		img.setAttribute("alt", `a pixelated sprite of ${profile.profileName}`);
 		img.setAttribute("loading", "lazy");
-		img.setAttribute("width", "320");
-		img.setAttribute("height", "217");
+		img.setAttribute("width", "100%");
+		img.setAttribute("height", "100%");
 
 		link.setAttribute("href", "#");
 		link.setAttribute("id",`${profile.profileName}`);
@@ -145,74 +127,6 @@ const puddinheadArts = [
 	},
 ];
 
-let puddinInfoDisplayed = false;
-const puddinImg = document.querySelector("#Puddinheadart");
-puddinImg.addEventListener('click', () => {
-	if (!puddinInfoDisplayed)
-	{
-		puddinInfoDisplayed = true;
-
-		const puddinInfo = document.createElement("div");
-		puddinInfo.className = "profile-info";
-
-		const name = document.createElement("h1");
-		name.textContent = `Puddinheadart`;
-		puddinInfo.appendChild(name);
-
-		const contact = document.createElement("a");
-		contact.textContent = `Puddinhead's Carrd`;
-		contact.href = "https://sofiapantas.carrd.co/"
-		contact.target = "_blank";
-        contact.style.textDecoration = "underline";
-
-		const website = document.createElement("p");
-		website.textContent = `Website: `;
-		website.appendChild(contact);
-		puddinInfo.appendChild(website);
-
-		const info = document.createElement("p");
-		info.textContent = `Self-taught digital artist from the Philippines with a love for all things geeky and artsy. Growing up, they became fascinated with anime and videogames and this interest led them to begin a hobby in drawing and eventually a dream in becoming an artist and game developer.`;
-		puddinInfo.appendChild(info);
-
-		const galleryTitle = document.createElement("h2");
-		galleryTitle.textContent = `ArtWork Gallery`;
-		puddinInfo.appendChild(galleryTitle);
-
-		const gallery = document.createElement("div");
-		gallery.className = "profile-gallery";
-		puddinInfo.appendChild(gallery);
-
-		puddinheadArts.forEach(art => {
-			let puddinCard = document.createElement("section");
-			puddinCard.className = "profile-art-card";
-			let artName = document.createElement("h3");
-			let artImg = document.createElement("img");
-			artName.textContent = art.artTitle;
-			artImg.setAttribute("src", art.imageUrl);
-			artImg.setAttribute("alt", `${art.artTitle}`);
-			artImg.setAttribute("loading", "lazy");
-			artImg.setAttribute("width", "100%");
-			artImg.setAttribute("height", "100%");
-			puddinCard.appendChild(artName);
-			puddinCard.appendChild(artImg);
-
-			gallery.appendChild(puddinCard);
-		});
-
-		document.querySelector("main").appendChild(puddinInfo);
-
-		const closeButton = document.createElement("button");
-		closeButton.className = "profile-button"
-        closeButton.textContent = `Close`;
-        closeButton.addEventListener('click', () => {
-            puddinInfo.remove();
-            puddinInfoDisplayed = false;
-        });
-        puddinInfo.appendChild(closeButton);
-	}
-
-});
-
 const mikoArts = [
 	{
 		artTitle: "Alina Sprite",
@@ -278,74 +192,6 @@ const mikoArts = [
 	
 ];
 
-let mikoInfoDisplayed = false;
-const mikoImg = document.querySelector("#MikoCappuccino");
-mikoImg.addEventListener('click', () =>{
-	if (!mikoInfoDisplayed)
-	{
-		mikoInfoDisplayed = true;
-
-		const mikoInfo = document.createElement("div");
-		mikoInfo.className = "profile-info";
-
-		const name = document.createElement("h1");
-		name.textContent = `MikoCappuccino`;
-		mikoInfo.appendChild(name);
-
-		const contact = document.createElement("a");
-		contact.textContent = `MikoCappuccino's Carrd`;
-		contact.href = "https://mikocappuccino.carrd.co/"
-		contact.target = "_blank";
-        contact.style.textDecoration = "underline";
-
-		const website = document.createElement("p");
-		website.textContent = `Website: `
-		website.appendChild(contact);
-		mikoInfo.appendChild(website);
-
-		const info = document.createElement("p");
-		info.textContent = `Maximalist not by choice, but by disorder. An art progidy whose love for the movie 'Frozen' pushed them to pursue art during their youth. While initially focusing on semi-realism, they've started branching out towards pixel art.`;
-		mikoInfo.appendChild(info);
-
-		const galleryTitle = document.createElement("h2");
-		galleryTitle.textContent = `ArtWork Gallery`;
-		mikoInfo.appendChild(galleryTitle);
-
-		const gallery = document.createElement("div");
-		gallery.className = "profile-gallery";
-		mikoInfo.appendChild(gallery);
-
-		mikoArts.forEach(art => {
-			let mikoCard = document.createElement("section");
-			mikoCard.className = "profile-art-card";
-			let artName = document.createElement("h3");
-			let artImg = document.createElement("img");
-			artName.textContent = art.artTitle;
-			artImg.setAttribute("src", art.imageUrl);
-			artImg.setAttribute("alt", `${art.artTitle}`);
-			artImg.setAttribute("loading", "lazy");
-			artImg.setAttribute("width", "100%");
-			artImg.setAttribute("height", "100%");
-			mikoCard.appendChild(artName);
-			mikoCard.appendChild(artImg);
-
-			gallery.appendChild(mikoCard);
-			
-		});
-
-		document.querySelector("main").appendChild(mikoInfo);
-
-		const closeButton = document.createElement("button");
-		closeButton.className = "profile-button"
-        closeButton.textContent = `Close`;
-        closeButton.addEventListener('click', () => {
-            mikoInfo.remove();
-            mikoInfoDisplayed = false;
-        });
-        mikoInfo.appendChild(closeButton);
-	}
-});
-
 const yuiArts = [
 	{
 		artTitle: "Little Nightmares",
@@ -365,73 +211,62 @@ const yuiArts = [
 	}
 ];
 
+let puddinInfoDisplayed = false;
+let mikoInfoDisplayed = false;
 let yuiInfoDisplayed = false;
+
+const puddinImg = document.querySelector("#Puddinheadart");
+const mikoImg = document.querySelector("#MikoCappuccino");
 const yuiImg = document.querySelector('#Yui');
-yuiImg.addEventListener('click', () =>{
-	if (!yuiInfoDisplayed)
-	{
-		yuiInfoDisplayed = true;
 
-		const yuiInfo = document.createElement("div");
-		yuiInfo.className = "profile-info";
+const profileModal = document.querySelector("#profileModal"); // Get the modal element
 
-		const name = document.createElement("h1");
-		name.textContent = `Yui Gaviola`;
-		yuiInfo.appendChild(name);
-
-		const contact = document.createElement("a");
-		contact.textContent = `Art Profile`;
-		contact.href = "https://www.facebook.com/frosted.sardonyx"
-		contact.target = "_blank";
-        contact.style.textDecoration = "underline";
-
-		const website = document.createElement("p");
-		website.textContent = `Website: `
-		website.appendChild(contact);
-		yuiInfo.appendChild(website);
-
-		const info = document.createElement("p");
-		info.textContent = `Sometimes harboring many names, Yui is the literary master of Kamalayi Studio whose interests lie in the creative field. With a passion for storytelling that spans genres, they weave together rich narratives that explore the complexities of human experience. While primarily a writer, they occassionally turn to canvas and color.`;
-		yuiInfo.appendChild(info);
-
-		const galleryTitle = document.createElement("h2");
-		galleryTitle.textContent = `ArtWork Gallery`;
-		yuiInfo.appendChild(galleryTitle);
-
-		const gallery = document.createElement("div");
-		gallery.className = "profile-gallery";
-		yuiInfo.appendChild(gallery);
-
-		yuiArts.forEach(art => {
-			let yuiCard = document.createElement("section");
-			yuiCard.className = "profile-art-card";
-			let artName = document.createElement("h3");
-			let artImg = document.createElement("img");
-			artName.textContent = art.artTitle;
-			artImg.setAttribute("src", art.imageUrl);
-			artImg.setAttribute("alt", `${art.artTitle}`);
-			artImg.setAttribute("loading", "lazy");
-			artImg.setAttribute("width", "100%");
-			artImg.setAttribute("height", "100%");
-			yuiCard.appendChild(artName);
-			yuiCard.appendChild(artImg);
-
-			gallery.appendChild(yuiCard);
-		});
-
-		document.querySelector("main").appendChild(yuiInfo);
-
-		const closeButton = document.createElement("button");
-		closeButton.className = "profile-button"
-        closeButton.textContent = `Close`;
-        closeButton.addEventListener('click', () => {
-            yuiInfo.remove();
-            yuiInfoDisplayed = false;
-        });
-        yuiInfo.appendChild(closeButton);
-
-	}
+puddinImg.addEventListener('click', () => {
+    displayProfileDetails(puddinheadArts, "Puddinheadart", "https://sofiapantas.carrd.co/",
+    `Self-taught digital artist from the Philippines with a love for all things geeky and artsy. Growing up, they became fascinated with anime and videogames and this interest led them to begin a hobby in drawing and eventually a dream in becoming an artist and game developer.`);
 });
+
+mikoImg.addEventListener('click', () => {
+    displayProfileDetails(mikoArts, "MikoCappuccino", "https://mikocappuccino.carrd.co/",
+    `Maximalist not by choice, but by disorder. An art progidy whose love for the movie 'Frozen' pushed them to pursue art during their youth. While initially focusing on semi-realism, they've started branching out towards pixel art.`);
+});
+
+yuiImg.addEventListener('click', () => {
+    displayProfileDetails(yuiArts, "Yui Gaviola", "https://www.facebook.com/frosted.sardonyx",
+    `Sometimes harboring many names, Yui is the literary master of Kamalayi Studio whose interests lie in the creative field. With a passion for storytelling that spans genres, they weave together rich narratives that explore the complexities of human experience. While primarily a writer, they occassionally turn to canvas and color.`);
+});
+
+function displayProfileDetails(artsData, profileName, contactLink, profileInfo) {
+    profileModal.innerHTML = ''; // Clear previous content
+
+    profileModal.innerHTML += `
+        <button id="closeModal">x</button>
+        <h1>${profileName}</h1>
+       <p>Website: <a href="${contactLink}" target="_blank" style="text-decoration: underline;">Carrd</a></p>
+        <p>${profileInfo}</p><br>
+        <h2>ArtWorks</h2>
+        <div class="profile-gallery"></div>
+    `;
+
+    const gallery = profileModal.querySelector(".profile-gallery");
+
+    artsData.forEach(art => {
+        gallery.innerHTML += `
+            <section class="profile-art-card">
+                <h3>${art.artTitle}</h3>
+                <img src="${art.imageUrl}" alt="${art.artTitle}" loading="lazy" width="100%" height="100%">
+            </section>
+        `;
+    });
+
+    profileModal.showModal();
+
+    const closeModalButton = profileModal.querySelector("#closeModal");
+    closeModalButton.addEventListener("click", () => {
+        profileModal.close();
+    });
+}
+
 
 
 

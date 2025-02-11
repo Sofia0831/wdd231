@@ -4,26 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kamalayi Studio</title>
-    <meta name="description" content="Creative hub for a trio of artists to showcase their art | WDD 131 | Project">
+    <meta name="description" content="Creative hub for a trio of artists to showcase their art | WDD 231 | Project">
     <meta name="author" content="Sofia Florylle S. Pantas">
+
+    <link rel="stylesheet" href="styles/normalize.css">
 
     <link rel="stylesheet" href="styles/kamalayistudio.css">
     <link rel="stylesheet" href="styles/kamalayistudio-larger.css">
 
-    <script defer src="scripts/kamalayistudio.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Kamalayi Studio Home Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sofia0831.github.io/wdd231/project/images/logo.webp">
+    <meta property="og:url" content="https://sofia0831.github.io/wdd231/project/kamalayistudio.html">
+
+    <script type="module" src="scripts/main.js"></script>
+    <script defer src="scripts/home.js"></script>
 
 </head>
+
 <body>
     <header>
-
-        <h1>KAMALAYI STUDIOS</h1>
-        <button aria-label="Menu Button" type="button" id="menu"></button>
-        <div class="navi">
-            <nav class="navigation">
-                <a href="#" id="home" title="Home" class="active">Home</a>
-                <a href="projects.html" id="project" title="Projects">Projects</a>
-                <a href="profiles.html" id="profiles" title="Profiles">Profiles</a>
-                <a href="contact.html" id="contact" title="Contact">Contact</a>
+        <div>
+            <h1>KAMALAYI STUDIOS</h1>
+            <button aria-label="Menu Button" type="button" id="menu"></button>
+        </div>
+        <div class="nav">
+            <nav class="navigation" id="animate">
+                <ul class="menuLinks">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="profiles.html">Profiles</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </nav>
         </div>
 
@@ -33,8 +49,30 @@
         <div class="banner">
             <picture>
                 <source srcset="images/banner2.webp" media="(min-width: 1000px)">
-                <img class="logo" src="images/logo.png" alt="kamalayi studio logo" width="320" height="320">
+                <img class="logo" src="images/logo.webp" alt="kamalayi studio logo" width="320" height="320">
             </picture>
+        </div>
+
+        <div class="home">
+            <section class="posts">
+                <h2>Latest Posts</h2>
+                <div class="posts-info">
+                    <button>Dev Log 3</button>
+                    <button>Dev Log 2</button>
+                    <button>Dev Log 1</button>
+                </div>
+            </section>
+
+            <section class="weather">
+                <h2>Current Weather</h2>
+                <div class="weather-container">
+                    <figure>
+                        <img id="weather-icon" src="#" alt="weather icon">
+                        <figcaption></figcaption>
+                    </figure> 
+                    <div id="weather-info"></div>
+                </div>
+            </section>
         </div>
 
         <div class="line">
@@ -44,13 +82,13 @@
         </div>
 
         <div class="socials">
-            <a href="mailto:kamalayistudio@gmail.com" target="_blank">
+            <a href="mailto:kamalayistudio@gmail.com" target="_blank" class="social-icon">
                 <img loading="lazy" src="images/email.svg" alt="kamalayi studio email address" width="60" height="60">
             </a>
-            <a href="https://x.com/KamalayiStudio" target="_blank">
+            <a href="https://x.com/KamalayiStudio" target="_blank" class="social-icon">
                 <img loading="lazy" src="images/twitter.svg" alt="kamalayi studio x account" width="54" height="54">
             </a>
-            <a href="https://www.facebook.com/profile.php?id=61555775979921" target="_blank">
+            <a href="https://www.facebook.com/profile.php?id=61555775979921" target="_blank" class="social-icon">
                 <img loading="lazy" src="images/facebook.svg" alt="kamalayi studio facebook page" width="60" height="60">
             </a>
         </div>
@@ -58,7 +96,7 @@
 
     <footer>
         <p>
-            Copyright &copy;<span id="currentyear"></span> KAMALAYI STUDIOS
+            <span id="currentyear"></span>
         </p>
         <p id="lastModified"></p>
     </footer>
