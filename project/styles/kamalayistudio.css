@@ -140,20 +140,38 @@ ul.menuLinks {
     font-size: 17px;
 }
 
-.weather-container {
+.welcome {
+    background-color: var(--background-color) !important;
     display: flex;
-    flex-direction: row;
-    margin: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
+#here {
+    font-family: var(--heading-font);
+    font-size: 30px;
+    padding: 1rem;
+    color: var(--accent1-color);
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+}
 
 #weather-info p {
     font-size: 17px;
-    padding-bottom: 10px;
+    
 }
 
 #weather-icon {
     filter: invert(70%); 
+    
+}
+
+figure {
+    margin: 0 auto;
+    
 }
 
 .posts-info {
@@ -164,7 +182,7 @@ ul.menuLinks {
 
 .posts-info button {
     padding: .5rem;
-    margin: 5px;
+    margin: 3px;
     background-color: var(--background-color);
     color: var(--accent1-color);
     border-radius: 10px;

@@ -211,15 +211,12 @@ const yuiArts = [
 	}
 ];
 
-let puddinInfoDisplayed = false;
-let mikoInfoDisplayed = false;
-let yuiInfoDisplayed = false;
 
 const puddinImg = document.querySelector("#Puddinheadart");
 const mikoImg = document.querySelector("#MikoCappuccino");
 const yuiImg = document.querySelector('#Yui');
 
-const profileModal = document.querySelector("#profileModal"); // Get the modal element
+const profileModal = document.querySelector("#profileModal"); 
 
 puddinImg.addEventListener('click', () => {
     displayProfileDetails(puddinheadArts, "Puddinheadart", "https://sofiapantas.carrd.co/",
@@ -237,13 +234,13 @@ yuiImg.addEventListener('click', () => {
 });
 
 function displayProfileDetails(artsData, profileName, contactLink, profileInfo) {
-    profileModal.innerHTML = ''; // Clear previous content
+    profileModal.innerHTML = '';
 
     profileModal.innerHTML += `
         <button id="closeModal">x</button>
         <h1>${profileName}</h1>
-       <p>Website: <a href="${contactLink}" target="_blank" style="text-decoration: underline;">Carrd</a></p>
-        <p>${profileInfo}</p><br>
+        <p>${profileInfo}</p>
+		<p><a href="${contactLink}" target="_blank" style="text-decoration: underline;">Learn More</a></p>
         <h2>ArtWorks</h2>
         <div class="profile-gallery"></div>
     `;

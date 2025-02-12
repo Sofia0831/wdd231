@@ -23,7 +23,11 @@
 
     .home {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+
+    .home section {
+        margin: 10px;
     }
 
     #weather-info p {
