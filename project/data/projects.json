@@ -3,91 +3,91 @@
 	    {
 	    	"projectName" : "Alina Sprite",
 	    	"imageUrl" : "images/alina.webp",
-            "artist" : "Miko",
+            "artist" : "MikoCapuccino",
             "date" : "April 20, 2024"
 	    },
 	    {
 	    	"projectName" : "Haven Sprite",
 	    	"imageUrl" : "images/haven.webp",
-            "artist" : "Miko",
+            "artist" : "MikoCapuccino",
             "date" : "April 20, 2024"
 	    },
 	    {
 	    	"projectName" : "Erato Sprite",
 	    	"imageUrl" : "images/erato.webp",
-            "artist" : "Miko",
+            "artist" : "MikoCapuccino",
             "date" : "April 20, 2024"
 	    },
 	    {
 	    	"projectName" : "Haven Sketch",
 	    	"imageUrl" :"images/gallery/havensketch.webp",
-            "artist" : "Puddinhead",
+            "artist" : "Puddinheadart",
             "date" : "May 1, 2024"
 	    },
 	    {
 	    	"projectName" : "Trio Sketch",
 	    	"imageUrl" : "images/gallery/triosketch.webp",
-            "artist" : "Puddinhead",
+            "artist" : "Puddinheadart",
             "date" : "April 6, 2024"
 	    },
 	    {
 	    	"projectName" : "Alina Sketch",
 	    	"imageUrl" : "images/gallery/alinasketch.webp",
-            "artist" : "Miko",
+            "artist" : "MikoCapuccino",
             "date" : "October 24, 2024"
 	    },
 	    {
 	    	"projectName" : "Birthday Collab 1",
 	    	"imageUrl" : "images/gallery/abday.webp",
-            "artist" : "Puddinhead",
+            "artist" : "Puddinheadart",
             "date" : "March 15, 2024"
 	    },
         {
 	    	"projectName" : "Birthday Collab 2",
 	    	"imageUrl" : "images/gallery/hbday.webp",
-            "artist" : "Puddinhead",
+            "artist" : "Puddinheadart",
             "date" : "March 15, 2024"
 	    },
         {
             "projectName" : "Kamila Illustration",
             "imageUrl" : "images/gallery/kamila.webp",
-            "artist" : "Miko",
+            "artist" : "MikoCapuccino",
             "date" : "November 13, 2023"
 	    },
         {
             "projectName" : "Birthday Collab 3",
             "imageUrl": "images/gallery/ltwins.webp",
-            "artist" : "Miko",
+            "artist" : "MikoCapuccino",
             "date" : "March 15, 2024"
 	    },
         {
             "projectName": "Birthday Collab 4",
             "imageUrl" : "images/gallery/rtwins.webp",
-            "artist" : "Miko",
+            "artist" : "MikoCapuccino",
             "date" : "March 15, 2024"
         },
 	    {
 	    	"projectName" : "Alina Illustration",
 	    	"imageUrl" : "images/gallery/alina-2.webp",
-            "artist" : "Miko",
+            "artist" : "MikoCapuccino",
             "date" : "May 2, 2024"
 	    },
 	    {
 	    	"projectName" : "Bestie Portrait",
 	    	"imageUrl" : "images/gallery/bestieportait.webp",
-            "artist" : "Miko",
+            "artist" : "MikoCapuccino",
             "date" : "July 3, 2024"
 	    },
 	    {
 	    	"projectName" : "DTIYS 1",
 	    	"imageUrl" : "images/gallery/dtiys1.webp",
-            "artist" : "Miko",
+            "artist" : "MikoCapuccino",
             "date" : "January 13, 2024"
 	    },
 	    {
 	    	"projectName" : "DTIYS 2",
 	    	"imageUrl" : "images/gallery/dtiys2.webp",
-            "artist" : "Puddinhead",
+            "artist" : "Puddinheadart",
             "date" : "January 13, 2024"
 	    }
     ]
